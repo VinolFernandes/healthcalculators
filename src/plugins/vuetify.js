@@ -1,7 +1,15 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib/framework';
+export default new Vuetify({});
 
-Vue.use(Vuetify);
+import Vue from "vue";
+import Vuetify from "vuetify/lib";
+// import "vuetify/src/stylus/app.styl";
 
-export default new Vuetify({
+Vue.use(Vuetify, {
+  iconfont: "md",
+  theme: {
+    primary: "#9652ff",
+    success: "#3cd1c2",
+    info: "#ffaa2c",
+    error: "#f83e70",
+  },
 });
