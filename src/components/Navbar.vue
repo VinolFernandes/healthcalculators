@@ -18,6 +18,8 @@
       flat
       v-model="drawer"
       app
+      floating
+      width="220"
       absolute
       temporary
       class="indigo"

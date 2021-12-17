@@ -8,7 +8,7 @@
       <v-container>
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
-            <v-card elevation="4" light tag="section">
+            <v-card elevation="4" dark class="indigo" tag="section">
               <v-card-title>
                 <v-layout align-center justify-space-between>
                   <h3 class="headline">
@@ -37,13 +37,13 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="indigo" dark flat> Forgot password? </v-btn>
+                <v-btn color="indigo" flat> Forgot password? </v-btn>
                 <v-spacer></v-spacer>
                 <v-btn
                   color="indigo"
                   dark
                   flat
-                  :large="$vuetify.breakpoint.smAndUp"
+                  :medium="$vuetify.breakpoint.smAndUp"
                   @submit="auth.signInAnonymously()"
                 >
                   Login<v-icon right>mdi-login</v-icon>

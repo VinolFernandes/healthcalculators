@@ -1,48 +1,57 @@
 <template>
-  <div id="app">
-    <header class="container">
-      <h1>RPN Calculator</h1>
-      <small>Write your height and height and click <em>calculate</em></small>
-    </header>
-    <main class="container">
-      <div class="form-horizontal">
-        <div class="col-xs-12 form-group">
-          <label for="weight" class="col-xs-4 control-label"
-            >weight <em>(in kg)</em></label
-          >
-          <div class="col-xs-8">
-            <input
+  <div>
+    <v-flex>
+      <v-card max-width="400" elevation="4" dark class="indigo mx-auto">
+        <v-card-title>
+          <span class="font-size-heavy display-1">
+            BMI Calculator
+          </span></v-card-title
+        >
+
+        <v-main class="container">
+          <div>
+            <div>
+              <!-- <v-label
+              dark
               v-model="weight"
-              id="weight"
-              type="text"
-              class="form-control"
-            />
+              class="col-xs-4 control-label font-weight-heavy"
+              >Weight <em>(in kg)</em></v-label
+            > -->
+
+              <v-text-field
+                v-model="weight"
+                filled
+                dense
+                clearable
+                label="Weight (cm)"
+                class="form-control"
+              />
+
+              <v-text-field
+                v-model="height"
+                clearable
+                filled
+                dense
+                label="Height (cm)"
+                class="form-control"
+              />
+            </div>
+            <div pa-4>
+              <v-btn class="info" @click="calculatebmi"
+                ><v-icon left>mdi-calculator</v-icon> Calculate
+              </v-btn>
+
+              <v-btn class="info" @click="save"
+                ><v-icon left>mdi-content-save</v-icon> Save
+              </v-btn>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 form-group">
-          <label for="height" class="col-xs-4 control-label"
-            >height <em>(in cm)</em></label
-          >
-          <div class="col-xs-8">
-            <input
-              v-model="height"
-              id="height"
-              type="text"
-              class="form-control"
-            />
-          </div>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-success btn-block" @click="calculate">
-            Calculate
-          </button>
-        </div>
-      </div>
-      <div class="result">
-        <span>Ant the result is...</span>
-        <em>{{ result }}</em>
-      </div>
-    </main>
+          <v-banner sticky class="result">
+            <span class="font-size-heavy title">BMI: {{ result }}</span>
+          </v-banner>
+        </v-main>
+      </v-card>
+    </v-flex>
   </div>
 </template>
 
@@ -52,15 +61,18 @@ export default {
     return {
       weight: "",
       height: "",
-      result: 'Click "Calculate"',
+      result: "",
     };
   },
   methods: {
-    calculate() {
+    calculatebmi() {
       let weight = parseFloat(this.weight);
       let height = parseFloat(this.height) / 100;
-      this.result = weight / (height * height);
+      this.result = parseFloat(weight / (height * height)).toFixed(2);
     },
+    // save() {}
+    // category(result){
+    //   if(result<);    overweight etc
   },
 };
 </script>
