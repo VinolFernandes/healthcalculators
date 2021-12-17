@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -14,16 +14,6 @@
                   <h3 class="headline">
                     {{ platformName }}
                   </h3>
-                  <v-flex>
-                    <v-img
-                      :alt="platformName"
-                      class="ml-3"
-                      contain
-                      height="48px"
-                      position="center right"
-                      src="https://www.mobygames.com/images/i/12/25/1435075.png"
-                    ></v-img>
-                  </v-flex>
                 </v-layout>
               </v-card-title>
               <v-divider></v-divider>
@@ -47,24 +37,19 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="info" flat> Forgot password? </v-btn>
+                <v-btn color="indigo" dark flat> Forgot password? </v-btn>
                 <v-spacer></v-spacer>
-                <v-btn color="info" :large="$vuetify.breakpoint.smAndUp">
-                  <v-icon left>lock</v-icon>
-                  Login
+                <v-btn
+                  color="indigo"
+                  dark
+                  flat
+                  :large="$vuetify.breakpoint.smAndUp"
+                  @submit="auth.signInAnonymously()"
+                >
+                  Login<v-icon right>mdi-login</v-icon>
                 </v-btn>
               </v-card-actions>
             </v-card>
-          </v-flex>
-          <v-flex sm12 md6 offset-md3>
-            <v-layout align-center justify-space-between>
-              <p class="caption my-3">
-                <a href="#">Privacy Policy</a>
-                |
-                <a href="#">Terms of Service</a>
-              </p>
-              <p class="caption my-3">Powered by <a href="#">StaffCircle</a></p>
-            </v-layout>
           </v-flex>
         </v-layout>
       </v-container>
@@ -73,13 +58,16 @@
 </template>
 
 <script>
+// import { auth } from "@/components/firebase";
+
 export default {
   data() {
     return {
+      // auth,
       darkTheme: true,
-      platformName: "Platform name",
-      password: null,
-      username: null,
+      platformName: "Login",
+      password: "",
+      username: "",
     };
   },
 };
@@ -88,7 +76,7 @@ export default {
 <style>
 .v-btn,
 .v-card {
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .v-card__title {
