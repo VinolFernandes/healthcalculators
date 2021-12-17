@@ -23,8 +23,14 @@
       class="indigo"
     >
       <v-card class="mx-auto" width="256" tile> </v-card>
+
       <v-list>
-        <v-list-item v-for="link in links" :key="link.text">
+        <v-list-item
+          v-for="link in links"
+          :key="link.text"
+          router
+          :to="link.route"
+        >
           <v-list-item-action>
             <v-icon class="white--text">{{ link.icon }}</v-icon>
           </v-list-item-action>
@@ -46,10 +52,11 @@ export default {
     return {
       drawer: false,
 
+      //add webpages to links array
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/" },
         { icon: "mdi-folder", text: "My Projects", route: "/projects" },
-        { icon: "mdi-account", text: "Account", route: "/team" },
+        { icon: "mdi-account", text: "Account", route: "/account" },
       ],
     };
   },
