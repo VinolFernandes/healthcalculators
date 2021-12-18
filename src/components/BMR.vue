@@ -54,7 +54,9 @@
                 dense
                 clearable
                 label="Weight (kg)"
+
                 class="form-control px-2"
+
               />
 
               <v-text-field
@@ -63,11 +65,13 @@
                 filled
                 dense
                 label="Height (cm)"
+
                 class="form-control px-2"
               />
             </div>
             <div pa-4>
               <v-btn class="info ml-15" @click="calculatebmr"
+
                 ><v-icon left>mdi-calculator</v-icon> Calculate
               </v-btn>
 
@@ -77,7 +81,9 @@
             </div>
           </div>
           <v-banner sticky class="result">
+
             <span class="font-size-heavy title"> BMR: {{ result }} calories</span>
+
           </v-banner>
         </v-main>
       </v-card>
@@ -87,16 +93,19 @@
 
 <script>
 
+
 export default {
   data() {
     return {
       // gender:"",
       age: "",
+
       weight: "",
       height: "",
       result: "",
     };
   },
+
   // CALCULATEBMR NOT WORKING PLEASE FIX
   methods: {
     calculatebmr() {
@@ -105,6 +114,7 @@ export default {
       let weight = parseFloat(this.weight);
       let height = parseFloat(this.height) / 100;
       this.result = parseFloat((10*weight)+(6.25*height)-(5*age)+5).toFixed(2);
+
     },
     // save() {}
     // category(result){

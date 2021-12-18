@@ -78,4 +78,4 @@ export default {
 </script>
 
 <style></style>
-diff --git a/src/components/BMR.vue b/src/components/BMR.vue
+
