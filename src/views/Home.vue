@@ -4,9 +4,9 @@
     <v-container class="my-6" id="dashboard-view" tag="section">
       <v-card><Login /></v-card>
       <!-- <BMI /> -->
-      <BMR />
       <!-- <bodyfat/> -->
       <!-- <idealw/> -->
+      <DashboardHome />
     </v-container>
   </div>
 </template>
@@ -15,13 +15,13 @@
 // import HelloWorld from "../components/HelloWorld";
 // import Login from "../components/Login";
 // import BMI from "../components/BMI";
-import BMR from"../components/BMR";
+// import BMR from"../components/BMR";
 // import bodyfat from "@/components/bodyfat";
 // import idealw from "@/components/idealw";
-
+import DashboardHome from "@/components/DashboardHome";
 export default {
   name: "Home",
 
-  components: { BMR},
+  components: { DashboardHome },
 };
 </script>
