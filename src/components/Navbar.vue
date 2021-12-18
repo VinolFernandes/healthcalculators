@@ -8,10 +8,10 @@
         <span class="font-weight-heavy">Calculator</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn flat color="white darken-3">
+      <!-- <v-btn flat color="white darken-3">
         <span right>Sign Out</span>
         <v-icon right>mdi-exit-to-app</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-toolbar>
 
     <v-navigation-drawer
@@ -19,7 +19,7 @@
       v-model="drawer"
       app
       floating
-      width="220"
+      width="300"
       absolute
       temporary
       class="indigo"
@@ -43,6 +43,13 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn block>
+            Logout
+          </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
   </nav>
 </template>
