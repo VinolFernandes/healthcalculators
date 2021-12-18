@@ -24,7 +24,7 @@
                 dense
                 clearable
                 label="Age"
-                class="form-control pa-4"
+                class="form-control px-2"
               />
             <v-radio-group
             v-model="Gender"
@@ -54,7 +54,9 @@
                 dense
                 clearable
                 label="Weight (kg)"
-                class="form-control pa-4"
+
+                class="form-control px-2"
+
               />
 
               <v-text-field
@@ -63,11 +65,13 @@
                 filled
                 dense
                 label="Height (cm)"
-                class="form-control pa-4"
+
+                class="form-control px-2"
               />
             </div>
             <div pa-4>
-              <v-btn class="info ml-15" @click="calculatebmi"
+              <v-btn class="info ml-15" @click="calculatebmr"
+
                 ><v-icon left>mdi-calculator</v-icon> Calculate
               </v-btn>
 
@@ -77,7 +81,9 @@
             </div>
           </div>
           <v-banner sticky class="result">
-            <span class="font-size-heavy title"> BMR: {{ result }}</span>
+
+            <span class="font-size-heavy title"> BMR: {{ result }} calories</span>
+
           </v-banner>
         </v-main>
       </v-card>
@@ -86,19 +92,29 @@
 </template>
 
 <script>
+
+
 export default {
   data() {
     return {
+      // gender:"",
+      age: "",
+
       weight: "",
       height: "",
       result: "",
     };
   },
+
+  // CALCULATEBMR NOT WORKING PLEASE FIX
   methods: {
-    calculatebmi() {
+    calculatebmr() {
+      // let gender=this.gender;
+      let age= parseInt(this.age);
       let weight = parseFloat(this.weight);
       let height = parseFloat(this.height) / 100;
-      this.result = parseFloat(weight / (height * height)).toFixed(2);
+      this.result = parseFloat((10*weight)+(6.25*height)-(5*age)+5).toFixed(2);
+
     },
     // save() {}
     // category(result){
