@@ -19,7 +19,7 @@
       v-model="drawer"
       app
       floating
-      width="220"
+      width="300"
       absolute
       temporary
       class="indigo"

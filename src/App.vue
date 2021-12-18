@@ -9,6 +9,9 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+// import {auth } from"@/components/firebase";
+
+// console.log(auth);
 export default {
   components: { Navbar },
   name: "App",

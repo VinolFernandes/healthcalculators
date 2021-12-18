@@ -63,7 +63,7 @@
 export default {
   data() {
     return {
-      // auth,
+    //  auth,
       darkTheme: true,
       platformName: "Login",
       password: "",
