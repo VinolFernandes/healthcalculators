@@ -45,8 +45,9 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>
+          <v-btn block flat>
             Logout
+            <v-icon right>mdi-logout</v-icon>
           </v-btn>
         </div>
       </template>
