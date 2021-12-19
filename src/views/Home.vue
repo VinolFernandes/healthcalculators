@@ -21,7 +21,6 @@
 // import BMI from "../components/BMI";
 import BMR from"../components/BMR";
 import DashboardHome from "@/components/DashboardHome";
-import DefaultFooter from "@/components/footer";
 // import bodyfat from "@/components/bodyfat";
 // import idealw from "@/components/idealw";
 
@@ -29,8 +28,7 @@ export default {
   name: "Home",
 
   components: { BMR,
-  DashboardHome,
-  DefaultFooter,},
+  DashboardHome,},
 
 };
 </script>
