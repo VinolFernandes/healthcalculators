@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-flex>
-      <v-card max-width="400" elevation="4" dark class="indigo mx-auto">
+      <v-card max-width="400" elevation="6" dark class="indigo mx-auto">
         <v-card-title>
           <span class="font-size-heavy display-1">
             BMI Calculator
@@ -78,4 +78,3 @@ export default {
 </script>
 
 <style></style>
-

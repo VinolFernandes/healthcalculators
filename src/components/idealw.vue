@@ -17,6 +17,24 @@
               class="col-xs-4 control-label font-weight-heavy"
               >Weight <em>(in kg)</em></v-label
             > -->
+              <v-radio-group v-model="gender" row>
+                <v-radio
+                  clearable
+                  filled
+                  dense
+                  label="Male"
+                  class="form-control ml-4 px-2"
+                  value="male"
+                />
+                <v-radio
+                  clearable
+                  filled
+                  dense
+                  label="Female"
+                  class="form-control"
+                  value="female"
+                />
+              </v-radio-group>
               <v-text-field
                 v-model="height"
                 clearable
@@ -33,27 +51,6 @@
                 label="Age"
                 class="form-control pa-4"
               /> -->
-              <v-radio-group
-            v-model="gender"
-            row>
-                
-              <v-radio
-                clearable
-                filled
-                dense
-                label="Male"
-                class="form-control ml-4 px-2"
-                value="male"
-              />
-              <v-radio
-                clearable
-                filled
-                dense
-                label="Female"
-                class="form-control"
-                value="female"
-              />
-              </v-radio-group>
             </div>
             <div pa-4>
               <v-btn class="info ml-15" @click="calculateidealw"
@@ -66,7 +63,9 @@
             </div>
           </div>
           <v-banner sticky class="result">
-            <span class="font-size-heavy title">Ideal Weight:  {{ result }} kg</span>
+            <span class="font-size-heavy title"
+              >Ideal Weight: {{ result }} kg</span
+            >
           </v-banner>
         </v-main>
       </v-card>
@@ -78,23 +77,26 @@
 export default {
   data() {
     return {
-    //   age: "",
+      //   age: "",
       height: "",
       gender: "",
-      result:""
+      result: "",
     };
   },
   // CALCULATEIDEALW DOES NOT WORK, PLEASE FIX
   methods: {
     calculateidealw() {
-      let gender = this.genders;
+      let gender = this.gender;
       let height = parseFloat(this.height);
-    //   let age= parseInt(this.age);
-      if(gender=='Male'){
-         this.result=parseFloat(52+1.9*((height-152.4)*0.393701)).toFixed(2);
-      }
-      else if(gender=='Female'){
-          this.result=parseFloat(49+1.7*((height-152.4)*0.393701)).toFixed(2);
+      //   let age= parseInt(this.age);
+      if (gender == "male") {
+        this.result = parseFloat(
+          52 + 1.9 * ((height - 152.4) * 0.393701)
+        ).toFixed(2);
+      } else if (gender == "female") {
+        this.result = parseFloat(
+          49 + 1.7 * ((height - 152.4) * 0.393701)
+        ).toFixed(2);
       }
     },
     // save() {}

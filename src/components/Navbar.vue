@@ -8,10 +8,11 @@
         <span class="font-weight-heavy">Calculator</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
+
       <!-- <v-btn flat color="white darken-3">
-        <span right>Sign Out</span>
-        <v-icon right>mdi-exit-to-app</v-icon>
-      </v-btn> -->
+          <span right>Sign Out</span>
+          <v-icon right>mdi-exit-to-app</v-icon>
+        </v-btn> -->
     </v-toolbar>
 
     <v-navigation-drawer
@@ -56,6 +57,7 @@
 </template>
 
 <script>
+// import Login from "@/components/Login";
 export default {
   components: {},
   data() {

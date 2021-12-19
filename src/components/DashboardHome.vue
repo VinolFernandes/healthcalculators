@@ -1,22 +1,38 @@
 <template>
   <div id="app">
-    <v-app id="inspire">
+    <v-app>
       <v-container grid-list-xl text-xs-center>
         <v-layout row wrap>
           <v-flex xs12 sm12>
-            <v-card class="darken-3">
-              <v-layout row wrap pa-3>
-                <v-flex xs10 sm6 md4 v-for="i in 6" :key="`4${i}`">
-                  <v-card hover>
-                    <div class="">
-                      <label for="check"></label>
-                    </div>
-                    <v-card-text></v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 sm6 md3 v-for="i in 4" :key="`4${i}`"> </v-flex>
-              </v-layout>
-            </v-card>
+            <v-layout row wrap pa-10>
+              <v-flex ma-5 pa-5 xs10 sm6 md4>
+                <v-card elevation="0">
+                  <!-- <v-card-text>BMI Calculator</v-card-text> -->
+                  <BMI />
+                </v-card>
+              </v-flex>
+
+              <v-flex ma-5 pa-5 xs10 sm6 md4>
+                <v-card elevation="0">
+                  <!-- <v-card-text>Ideal Weight Calculator</v-card-text> -->
+                  <idealw />
+                </v-card>
+              </v-flex>
+
+              <v-flex ma-5 pa-5 xs10 sm6 md4>
+                <v-card elevation="0">
+                  <!-- <v-card-text>BMR Calculator</v-card-text> -->
+                  <BMR />
+                </v-card>
+              </v-flex>
+
+              <v-flex ma-5 pa-5 xs10 sm6 md4>
+                <v-card elevation="0">
+                  <!-- <v-card-text>Body FatCalculator</v-card-text> -->
+                  <bodyfat />
+                </v-card>
+              </v-flex>
+            </v-layout>
           </v-flex>
         </v-layout>
       </v-container>
@@ -24,7 +40,21 @@
   </div>
 </template>
 <script>
-export default {};
+import BMI from "@/components/BMI";
+import BMR from "@/components/BMR";
+import bodyfat from "@/components/bodyfat";
+import idealw from "@/components/idealw";
+
+export default {
+  name: "DashboardHome",
+  components: { BMI, BMR, bodyfat, idealw },
+  calculatorcards: [
+    { text: "BMI Calculator", component: BMI },
+    { text: "Ideal Weight Calculator", component: idealw },
+    { text: "BMR Calculator", component: BMR },
+    { text: "Body Fat Calculator", component: bodyfat },
+  ],
+};
 </script>
 
 <style></style>
