@@ -7,17 +7,14 @@
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
         <span class="font-weight-light">Health</span>
         <span class="font-weight-heavy">Calculator</span>
-              <span>
-          <v-btn
+      </v-app-bar-title>
+      <v-spacer></v-spacer>
+          <!-- <v-btn
           float-right
             text="Login"
             route= "/Login">
            Login</v-btn>
-           <Login />
-        </span>
-      </v-app-bar-title>
-      <v-spacer></v-spacer>
-
+           <Login /> -->
       <!-- <v-btn flat color="white darken-3">
           <span right>Sign Out</span>
           <v-icon right>mdi-exit-to-app</v-icon>
