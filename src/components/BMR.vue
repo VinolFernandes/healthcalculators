@@ -92,7 +92,7 @@ export default {
       age: "",
       weight: "",
       height: "",
-      result: "0",
+      result: "",
     };
   },
 
