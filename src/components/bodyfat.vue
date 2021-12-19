@@ -133,9 +133,6 @@ export default {
         this.bfp = parseFloat(1.2 * bmi + 0.23 * age - 5.4).toFixed(2);
       }
     },
-    // save() {}
-    // category(result){
-    //   if(result<);    overweight etc
   },
 };
 </script>

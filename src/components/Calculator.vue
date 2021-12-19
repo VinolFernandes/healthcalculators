@@ -70,9 +70,6 @@ export default {
       let height = parseFloat(this.height) / 100;
       this.result = parseFloat(weight / (height * height)).toFixed(2);
     },
-    // save() {}
-    // category(result){
-    //   if(result<);    overweight etc
   },
 };
 </script>
