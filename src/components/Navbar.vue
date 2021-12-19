@@ -1,3 +1,4 @@
+
 <template>
   <nav>
     <v-toolbar flat app color="indigo">
@@ -6,6 +7,14 @@
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
         <span class="font-weight-light">Health</span>
         <span class="font-weight-heavy">Calculator</span>
+              <span>
+          <v-btn
+          float-right
+            text="Login"
+            route= "/Login">
+           Login</v-btn>
+           <Login />
+        </span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
 
@@ -57,7 +66,7 @@
 </template>
 
 <script>
-// import Login from "@/components/Login";
+// import Login from "@/components/Login"
 export default {
   components: {},
   data() {
@@ -67,8 +76,8 @@ export default {
       //add webpages to links array
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/" },
-        { icon: "mdi-folder", text: "My Projects", route: "/projects" },
         { icon: "mdi-account", text: "Account", route: "/account" },
+        { icon: "mdi-login", text: "Login" ,route: "/Login"}
       ],
     };
   },
