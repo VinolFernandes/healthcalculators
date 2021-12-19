@@ -18,6 +18,24 @@
               >Weight <em>(in kg)</em></v-label
             > -->
 
+              <v-radio-group v-model="Gender" row>
+                <v-radio
+                  clearable
+                  filled
+                  dense
+                  label="Male"
+                  class="form-control ml-4"
+                  value="male"
+                />
+                <v-radio
+                  clearable
+                  filled
+                  dense
+                  label="Female"
+                  class="form-control"
+                  value="female"
+                />
+              </v-radio-group>
               <v-text-field
                 v-model="Age"
                 filled
@@ -26,37 +44,14 @@
                 label="Age"
                 class="form-control px-2"
               />
-            <v-radio-group
-            v-model="Gender"
-            row>
-                
-              <v-radio
-                clearable
-                filled
-                dense
-                label="Male"
-                class="form-control ml-4"
-                value="Male"
-              />
-              <v-radio
-                clearable
-                filled
-                dense
-                label="Female"
-                class="form-control"
-                value="Female"
-              />
-              </v-radio-group>
-                
+
               <v-text-field
                 v-model="weight"
                 filled
                 dense
                 clearable
                 label="Weight (kg)"
-
                 class="form-control px-2"
-
               />
 
               <v-text-field
@@ -65,13 +60,11 @@
                 filled
                 dense
                 label="Height (cm)"
-
                 class="form-control px-2"
               />
             </div>
             <div pa-4>
               <v-btn class="info ml-15" @click="calculatebmr"
-
                 ><v-icon left>mdi-calculator</v-icon> Calculate
               </v-btn>
 
@@ -81,9 +74,10 @@
             </div>
           </div>
           <v-banner sticky class="result">
-
-            <span class="font-size-heavy title"> BMR: {{ result }} calories</span>
-
+            <span class="font-size-heavy title">
+              Basal Metabloic Rate: calories</span
+            >
+            <p>{{ bmr }}</p>
           </v-banner>
         </v-main>
       </v-card>
@@ -92,33 +86,36 @@
 </template>
 
 <script>
-
-
 export default {
   data() {
     return {
-      // gender:"",
+      gender: "",
       age: "",
 
       weight: "",
       height: "",
-      result: "",
+      bmr: "",
     };
   },
 
   // CALCULATEBMR NOT WORKING PLEASE FIX
   methods: {
     calculatebmr() {
-      // let gender=this.gender;
-      let age= parseInt(this.age);
-      let weight = parseFloat(this.weight);
-      let height = parseFloat(this.height) / 100;
-      this.result = parseFloat((10*weight)+(6.25*height)-(5*age)+5).toFixed(2);
+      let gender = this.gender;
 
+      let height = parseFloat(this.height);
+      let weight = parseFloat(this.weight);
+      let age = parseInt(this.age);
+      if (gender == "male") {
+        this.bmr = parseFloat(
+          10 * weight + 6.25 * height - 5 * age + 5
+        ).toFixed(2);
+      } else if (gender == "female") {
+        this.bmr = parseFloat(
+          10 * weight + 6.25 * height - 5 * age - 161
+        ).toFixed(2);
+      }
     },
-    // save() {}
-    // category(result){
-    //   if(result<);    overweight etc
   },
 };
 </script>

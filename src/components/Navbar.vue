@@ -8,10 +8,11 @@
         <span class="font-weight-heavy">Calculator</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
+
       <!-- <v-btn flat color="white darken-3">
-        <span right>Sign Out</span>
-        <v-icon right>mdi-exit-to-app</v-icon>
-      </v-btn> -->
+          <span right>Sign Out</span>
+          <v-icon right>mdi-exit-to-app</v-icon>
+        </v-btn> -->
     </v-toolbar>
 
     <v-navigation-drawer
@@ -45,8 +46,9 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>
+          <v-btn block flat>
             Logout
+            <v-icon right>mdi-logout</v-icon>
           </v-btn>
         </div>
       </template>
@@ -55,6 +57,7 @@
 </template>
 
 <script>
+// import Login from "@/components/Login";
 export default {
   components: {},
   data() {
