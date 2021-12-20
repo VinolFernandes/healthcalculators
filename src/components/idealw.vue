@@ -86,9 +86,9 @@ export default {
   // CALCULATEIDEALW DOES NOT WORK, PLEASE FIX
   methods: {
     calculateidealw() {
-      let gender = this.gender;
       let height = parseFloat(this.height);
       //   let age= parseInt(this.age);
+      let gender = this.gender;
       if (gender == "male") {
         this.result = parseFloat(
           52 + 1.9 * ((height - 152.4) * 0.393701)

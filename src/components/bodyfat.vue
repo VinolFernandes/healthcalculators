@@ -116,32 +116,23 @@ export default {
       height: "",
       bfp: "",
       age: "",
-      //   neck:"",
-      //   waist:""
     };
   },
   methods: {
     calculatebodyfat() {
-      // let gender= this.gender;
-      //   let weight = parseFloat(this.weight);
-      //   let height = parseFloat(this.height) / 100;
-      //   let neck= parseFloat(this.neck);
-      //   let waist = parseFloat(this.waist);
       let age = parseInt(this.age);
-      //   if(gender='male')
-      //   this.result = parseFloat((495)/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(height))).toFixed(2);
-      //   else{
-      //           this.result = parseFloat((495)/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(height))).toFixed(2);
-      //   }
-
       let weight = parseFloat(this.weight);
       let height = parseFloat(this.height) / 100;
-      let bmi = parseFloat(weight / (height * height)).toFixed(2);
-      this.bfp = parseFloat(1.2 * bmi + 0.23 * age - 16.2).toFixed(2);
+      let gender = this.gender;
+
+      if (gender == "male") {
+        let bmi = parseFloat(weight / (height * height)).toFixed(2);
+        this.bfp = parseFloat(1.2 * bmi + 0.23 * age - 16.2).toFixed(2);
+      } else if (gender == "female") {
+        let bmi = parseFloat(weight / (height * height)).toFixed(2);
+        this.bfp = parseFloat(1.2 * bmi + 0.23 * age - 5.4).toFixed(2);
+      }
     },
-    // save() {}
-    // category(result){
-    //   if(result<);    overweight etc
   },
 };
 </script>

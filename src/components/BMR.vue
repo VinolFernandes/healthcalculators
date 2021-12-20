@@ -18,7 +18,7 @@
               >Weight <em>(in kg)</em></v-label
             > -->
 
-              <v-radio-group v-model="Gender" row>
+              <v-radio-group v-model="gender" row>
                 <v-radio
                   clearable
                   filled
@@ -37,7 +37,7 @@
                 />
               </v-radio-group>
               <v-text-field
-                v-model="Age"
+                v-model="age"
                 filled
                 dense
                 clearable
@@ -64,7 +64,7 @@
               />
             </div>
             <div pa-4>
-              <v-btn class="info ml-15" @click="calculatebmr"
+              <v-btn class="info ml-15" @submit="calculatebmr"
                 ><v-icon left>mdi-calculator</v-icon> Calculate
               </v-btn>
 
@@ -74,10 +74,9 @@
             </div>
           </div>
           <v-banner sticky class="result">
-            <span class="font-size-heavy title">
-              Basal Metabloic Rate: calories</span
-            >
-            <p>{{ bmr }}</p>
+            <span class="font-size-heavy title" v-bind="result">
+              Basal Metabolic Rate:
+            </span>
           </v-banner>
         </v-main>
       </v-card>
@@ -91,10 +90,9 @@ export default {
     return {
       gender: "",
       age: "",
-
       weight: "",
       height: "",
-      bmr: "",
+      result: "",
     };
   },
 
@@ -105,15 +103,33 @@ export default {
 
       let height = parseFloat(this.height);
       let weight = parseFloat(this.weight);
-      let age = parseInt(this.age);
+      let age = parseFloat(this.age);
       if (gender == "male") {
-        this.bmr = parseFloat(
-          10 * weight + 6.25 * height - 5 * age + 5
-        ).toFixed(2);
+        this.result = parseFloat(
+          370 +
+            21.6(
+              1 -
+                parseFloat(
+                  1.2 * parseFloat(weight / (height * height)) +
+                    0.23 * age -
+                    16.2
+                )
+            ) *
+              weight
+        );
       } else if (gender == "female") {
-        this.bmr = parseFloat(
-          10 * weight + 6.25 * height - 5 * age - 161
-        ).toFixed(2);
+        this.result = parseFloat(
+          370 +
+            21.6(
+              1 -
+                parseFloat(
+                  1.2 * parseFloat(weight / (height * height)) +
+                    0.23 * age -
+                    5.4
+                )
+            ) *
+              weight
+        );
       }
     },
   },
