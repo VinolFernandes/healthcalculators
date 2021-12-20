@@ -1,3 +1,4 @@
+
 <template>
   <nav>
     <v-toolbar flat app color="indigo">
@@ -8,7 +9,12 @@
         <span class="font-weight-heavy">Calculator</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-
+          <!-- <v-btn
+          float-right
+            text="Login"
+            route= "/Login">
+           Login</v-btn>
+           <Login /> -->
       <!-- <v-btn flat color="white darken-3">
           <span right>Sign Out</span>
           <v-icon right>mdi-exit-to-app</v-icon>
@@ -57,7 +63,7 @@
 </template>
 
 <script>
-// import Login from "@/components/Login";
+// import Login from "@/components/Login"
 export default {
   components: {},
   data() {
@@ -68,6 +74,7 @@ export default {
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/" },
         { icon: "mdi-account", text: "Account", route: "/account" },
+        { icon: "mdi-login", text: "Login" ,route: "/Login"}
       ],
     };
   },
