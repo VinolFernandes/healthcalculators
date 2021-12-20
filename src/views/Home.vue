@@ -6,7 +6,7 @@
       <v-card><Login /></v-card>
       <!-- <BMI /> -->
       <DashboardHome />
-      <BMR />
+      <!-- <BMR /> -->
       <!-- <bodyfat/> -->
       <!-- <idealw/> -->
 
@@ -19,7 +19,7 @@
 // import HelloWorld from "../components/HelloWorld";
 // import Login from "../components/Login";
 // import BMI from "../components/BMI";
-import BMR from"../components/BMR";
+// import BMR from"../components/BMR";
 import DashboardHome from "@/components/DashboardHome";
 // import bodyfat from "@/components/bodyfat";
 // import idealw from "@/components/idealw";
@@ -27,7 +27,7 @@ import DashboardHome from "@/components/DashboardHome";
 export default {
   name: "Home",
 
-  components: { BMR,
+  components: { 
   DashboardHome,},
 
 };
