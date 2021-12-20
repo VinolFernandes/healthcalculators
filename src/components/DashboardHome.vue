@@ -1,51 +1,78 @@
 <template>
-  <div id="app" >
-    <v-app>
-      <v-container grid-list-xl text-xs-center>
-        <v-layout row wrap>
-          <v-flex xs12 sm12>
-            <v-layout row wrap pa-10>
-              <v-flex ma-5 pa-3 xs12 sm6 md5>
-                <v-card elevation="0">
-                  <BMI />
+    <div>
+         <v-flex sm6 xs12 md3 >
+            <v-avatar size="80px">
+            <v-img src="person.avatar"></v-img>
+            </v-avatar>
+            <h1>Welcome to your Dashboard!</h1>
+          </v-flex> 
+    <v-container>
+        <v-layout>
+            <v-flex sm6 xs12 md6 lg3>
+                <v-card class="ma-3">
+                    <v-list-item>
+                    <v-list-item-content>
+                      <div class="pverline text-left">BMI</div>
+                      <div><v-divider></v-divider></div>
+                    </v-list-item-content>
+                    </v-list-item>
+                    <v-card-actions>
+                      
+                      <div class="overline ml-2">Your BMI is : {{bmi}}</div>
+                      <v-spacer></v-spacer>
+                      <v-btn outlined color="teal lighten-3" dark v-on="on" small>Update</v-btn>
+                    </v-card-actions>
                 </v-card>
-              </v-flex>
-
-              <v-flex ma-5 pa-3 xs12 sm6 md5>
-                <v-card elevation="0">
-                  <idealw />
+            </v-flex>
+                <v-flex sm6 xs12 md6 lg3>
+                <v-card class="ma-3">
+                    <v-list-item>
+                    <v-list-item-content>
+                      <div class="pverline text-left">BMR</div>
+                      <div><v-divider></v-divider></div>
+                    </v-list-item-content>
+                    </v-list-item>
+                    <v-card-actions>
+                      
+                      <div class="overline ml-2">Your BMR is : {{bmi}} calorie</div>
+                      <v-spacer></v-spacer>
+                      <v-btn outlined color="teal lighten-3" dark v-on="on" small>Update</v-btn>
+                    </v-card-actions>
                 </v-card>
-              </v-flex>
-
-              <!-- <v-flex ma-5 pa-5 xs10 sm6 md4>
-
-                <v-card elevation="0">
-                  <BMR />
+                </v-flex>
+                <v-flex sm6 xs12 md6 lg3>
+                <v-card class="ma-3">
+                    <v-list-item>
+                    <v-list-item-content>
+                      <div class="pverline text-left">Ideal Weight:</div>
+                      <div><v-divider></v-divider></div>
+                    </v-list-item-content>
+                    </v-list-item>
+                    <v-card-actions>
+                      
+                      <div class="overline ml-2">Your Ideal Weight is : {{bmi}} KG</div>
+                      <v-spacer></v-spacer>
+                      <v-btn outlined color="teal lighten-3" dark v-on="on" small>Update</v-btn>
+                    </v-card-actions>
                 </v-card>
-              </v-flex> -->
-
-              <v-flex ma-5 pa-3 xs12 sm6 md5>
-                <v-card elevation="0">
-                  <bodyfat />
+                </v-flex>
+                <v-flex sm6 xs12 md6 lg3>
+                <v-card class="ma-3">
+                    <v-list-item>
+                    <v-list-item-content>
+                      <div class="pverline text-left">Body Fat</div>
+                      <div><v-divider></v-divider></div>
+                    </v-list-item-content>
+                    </v-list-item>
+                    <v-card-actions>
+                      
+                      <div class="overline ml-2">Your Body fat is : {{bmi}}%</div>
+                      <v-spacer></v-spacer>
+                      <v-btn outlined color="teal lighten-3" dark v-on="on" small>Update</v-btn>
+                    </v-card-actions>
                 </v-card>
-              </v-flex>
-            </v-layout>
-          </v-flex>
+            </v-flex>
         </v-layout>
-      </v-container>
-    </v-app>
-  </div>
+    </v-container>
+    </div>
 </template>
-<script>
-import BMI from "@/components/BMI";
-// import BMR from "@/components/BMR";
-import bodyfat from "@/components/bodyfat";
-import idealw from "@/components/idealw";
-
-export default {
-  name: "DashboardHome",
-  components: { BMI, bodyfat, idealw },
-};
-</script>
-
-<style></style>

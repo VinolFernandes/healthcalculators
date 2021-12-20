@@ -28,7 +28,7 @@
         md="auto"
       >
         <div class="text-body-1 font-weight-light pt-6 pt-md-0 text-center white--text">
-          &copy; {{ (new Date()).getFullYear() }}, Made by 
+          {{ (new Date()).getFullYear() }}, Made by 
           <a
             href="https://github.com/saeyesss/healthcalculators"
             class="text-decoration-none white--text"

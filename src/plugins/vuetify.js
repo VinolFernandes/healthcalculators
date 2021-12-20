@@ -1,4 +1,6 @@
-export default new Vuetify({});
+export default new Vuetify({
+
+});
 
 import Vue from "vue";
 import Vuetify from "vuetify/lib";
@@ -7,9 +9,16 @@ import Vuetify from "vuetify/lib";
 Vue.use(Vuetify, {
   iconfont: "md",
   theme: {
-    primary: "#9652ff",
-    success: "#3cd1c2",
-    info: "#ffaa2c",
-    error: "#f83e70",
+    dark:true,
+     primary: '#1976D2',
+  secondary: '#424242',
+  accent: '#82B1FF',
+  error: '#FF5252',
+  info: '#2196F3',
+  success: '#4CAF50',
+  warning: '#FFC107',
   },
 });
+// src/plugins/vuetify.js
+
+

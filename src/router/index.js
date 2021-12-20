@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Account from "../views/Account.vue";
 import Login from "@/components/Login"
+import About from "../views/About.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     name : "Login",
     component: Login,
   },
+  {
+    path:"/About",
+    name: "About",
+    component: About,
+  }
 ];
 
 const router = new VueRouter({
@@ -31,32 +37,3 @@ const router = new VueRouter({
 
 export default router;
 
-// import Vue from "vue";
-// import Router from "vue-router";
-// import Dashboard from "../views/Dashboard.vue";
-// import Projects from "../views/Projects.vue";
-// import Team from "../views/Team.vue";
-
-// Vue.use(Router);
-
-// export default new Router({
-//   mode: "history",
-//   base: process.env.BASE_URL,
-//   routes: [
-//     {
-//       path: "/",
-//       name: "dashboard",
-//       component: Dashboard,
-//     },
-//     {
-//       path: "/projects",
-//       name: "projects",
-//       component: Projects,
-//     },
-//     {
-//       path: "/team",
-//       name: "team",
-//       component: Team,
-//     },
-//   ],
-// });
