@@ -66,7 +66,7 @@
 
 <script>
 // import { auth } from "@/components/firebase";
-import firebase from "firebase";
+// import firebase from "firebase";
 // let provider = new firebase.auth.GoogleAuthProvider();
 // firebase
 //   .auth()
