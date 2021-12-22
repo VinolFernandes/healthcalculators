@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -50,11 +50,12 @@
                 </v-btn>
               </v-card-actions>
             </v-card>
-            <v-divider ></v-divider>
+            <v-divider></v-divider>
             <v-container text-center>
-              <v-btn class="indigo " dark
-              text-center><v-icon left>mdi-google</v-icon>
-              Sign in with Google</v-btn>
+              <v-btn class="indigo" dark text-center @on-click="signGoogle()"
+                ><v-icon dense left color="white">mdi-google</v-icon> Sign in
+                with Google</v-btn
+              >
             </v-container>
           </v-flex>
         </v-layout>
@@ -65,11 +66,24 @@
 
 <script>
 // import { auth } from "@/components/firebase";
-
+// import firebase from "firebase";
+// let provider = new firebase.auth.GoogleAuthProvider();
+// firebase
+//   .auth()
+//   .signInWithPopup(provider)
+//   .then((result) => {
+//     let token = result.credential.accessToken;
+//     let user = result.user;
+//     console.log(token); // Token
+//     console.log(user); // User that was authenticated
+//   })
+//   .catch((err) => {
+//     console.log(err); // This will give you all the information needed to further debug any errors
+//   });
 export default {
   data() {
     return {
-    //  auth,
+      //  auth,
       darkTheme: true,
       platformName: "Login",
       password: "",
@@ -80,12 +94,12 @@ export default {
 </script>
 
 <style>
-#inspire{
-   background-color: indigo;
-  background:url('../assets/homebg.png') no-repeat center center;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
+#inspire {
+  background-color: indigo;
+  background: url("../assets/homebg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .v-btn,
