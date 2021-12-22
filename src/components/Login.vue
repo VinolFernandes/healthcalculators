@@ -50,10 +50,10 @@
                 </v-btn>
               </v-card-actions>
             </v-card>
-            <v-divider></v-divider>
+            <v-divider ></v-divider>
             <v-container text-center>
-              <v-btn class="indigo"
-              text-center>
+              <v-btn class="indigo " dark
+              text-center><v-icon left>mdi-google</v-icon>
               Sign in with Google</v-btn>
             </v-container>
           </v-flex>
