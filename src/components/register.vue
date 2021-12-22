@@ -18,13 +18,20 @@
               </v-card-title>
               <v-divider></v-divider>
               <v-card-text>
-                <p>Sign in with your username and password:</p>
                 <v-form>
                   <v-text-field
                     outline
-                    label="Username"
+                    label="Full name"
                     type="text"
-                    v-model="username"
+                    v-model="name"
+                    filled
+                  ></v-text-field>
+                   <v-text-field
+                    outline
+                    label="Email"
+                    type="text"
+                    v-model="email"
+                    filled
                   ></v-text-field>
                   <v-text-field
                     outline
@@ -32,30 +39,24 @@
                     label="Password"
                     type="password"
                     v-model="password"
+                    filled
+                  ></v-text-field>
+                  <v-text-field
+                    outline
+                    hide-details
+                    label="Confirm Password"
+                    type="password"
+                    v-model="password"
+                    filled
+                    class="mt-5"
                   ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="indigo" flat> Forgot password? </v-btn>
-                <v-spacer></v-spacer>
-                <v-btn
-                  color="indigo"
-                  dark
-                  flat
-                  :medium="$vuetify.breakpoint.smAndUp"
-                  @submit="auth.signInAnonymously()"
-                >
-                  Sign in Anonymously<v-icon right>mdi-login</v-icon>
-                </v-btn>
+                <v-btn >Register</v-btn>
               </v-card-actions>
-            </v-card>
-            <v-divider ></v-divider>
-            <v-container text-center>
-              <v-btn class="indigo " dark
-              text-center><v-icon left>mdi-google</v-icon>
-              Sign in with Google</v-btn>
-            </v-container>
+            </v-card>   
           </v-flex>
         </v-layout>
       </v-container>
@@ -71,9 +72,10 @@ export default {
     return {
     //  auth,
       darkTheme: true,
-      platformName: "Login",
+      platformName: "Register",
       password: "",
       username: "",
+      email: "",
     };
   },
 };

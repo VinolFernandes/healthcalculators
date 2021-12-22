@@ -9,7 +9,7 @@
                 
                 <div class="text-center pa-5 my-auto">
                     
-                    <router-link to="/Login" tag="button" id="getstar"><v-btn class="indigo" x-large router :to="link.route">Get Started!</v-btn></router-link>
+                    <router-link to="/register" tag="button" id="getstar"><v-btn class="indigo" x-large router :to="link.route">Get Started!</v-btn></router-link>
                 </div>
             </div>
         </div>
