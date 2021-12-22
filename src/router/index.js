@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Account from "../views/Account.vue";
 import Login from "@/components/Login"
 import About from "../views/About.vue"
+import register from '@/components/register';
 Vue.use(VueRouter);
 
 const routes = [
@@ -26,7 +27,13 @@ const routes = [
     path:"/About",
     name: "About",
     component: About,
+  },
+  {
+    path:"/register",
+    name: "register",
+    component: register,
   }
+
 ];
 
 const router = new VueRouter({

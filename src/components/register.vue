@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -18,13 +18,20 @@
               </v-card-title>
               <v-divider></v-divider>
               <v-card-text>
-                <p>Sign in with your username and password:</p>
                 <v-form>
                   <v-text-field
                     outline
-                    label="Username"
+                    label="Full name"
                     type="text"
-                    v-model="username"
+                    v-model="name"
+                    filled
+                  ></v-text-field>
+                   <v-text-field
+                    outline
+                    label="Email"
+                    type="text"
+                    v-model="email"
+                    filled
                   ></v-text-field>
                   <v-text-field
                     outline
@@ -32,30 +39,24 @@
                     label="Password"
                     type="password"
                     v-model="password"
+                    filled
+                  ></v-text-field>
+                  <v-text-field
+                    outline
+                    hide-details
+                    label="Confirm Password"
+                    type="password"
+                    v-model="password"
+                    filled
+                    class="mt-5"
                   ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="indigo" flat> Forgot password? </v-btn>
-                <v-spacer></v-spacer>
-                <v-btn
-                  color="indigo"
-                  dark
-                  flat
-                  :medium="$vuetify.breakpoint.smAndUp"
-                >
-                  Sign in Anonymously<v-icon right>mdi-login</v-icon>
-                </v-btn>
+                <v-btn >Register</v-btn>
               </v-card-actions>
-            </v-card>
-            <v-divider></v-divider>
-            <v-container text-center>
-              <v-btn class="indigo" dark text-center @on-click="signGoogle()"
-                ><v-icon dense left color="white">mdi-google</v-icon> Sign in
-                with Google</v-btn
-              >
-            </v-container>
+            </v-card>   
           </v-flex>
         </v-layout>
       </v-container>
@@ -65,40 +66,28 @@
 
 <script>
 // import { auth } from "@/components/firebase";
-// import firebase from "firebase";
-// let provider = new firebase.auth.GoogleAuthProvider();
-// firebase
-//   .auth()
-//   .signInWithPopup(provider)
-//   .then((result) => {
-//     let token = result.credential.accessToken;
-//     let user = result.user;
-//     console.log(token); // Token
-//     console.log(user); // User that was authenticated
-//   })
-//   .catch((err) => {
-//     console.log(err); // This will give you all the information needed to further debug any errors
-//   });
+
 export default {
   data() {
     return {
-      //  auth,
+    //  auth,
       darkTheme: true,
-      platformName: "Login",
+      platformName: "Register",
       password: "",
       username: "",
+      email: "",
     };
   },
 };
 </script>
 
 <style>
-#inspire {
-  background-color: indigo;
-  background: url("../assets/homebg.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#inspire{
+   background-color: indigo;
+  background:url('../assets/homebg.png') no-repeat center center;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
   background-size: cover;
 }
 .v-btn,
