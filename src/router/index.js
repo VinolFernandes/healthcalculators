@@ -2,38 +2,44 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Account from "../views/Account.vue";
-import Login from "@/components/Login"
-import About from "../views/About.vue"
-import register from '@/components/register';
+import Login from "../components/Login";
+import About from "../views/About.vue";
+import DashboardHome from "../components/DashboardHome.vue";
+import register from "../components/register";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "Home",
     component: Home,
   },
   {
     path: "/account",
-    name: "account",
+    name: "Account",
     component: Account,
   },
+
   {
-    path: "/Login",
-    name : "Login",
-    component: Login,
-  },
-  {
-    path:"/About",
+    path: "/About",
     name: "About",
     component: About,
   },
   {
-    path:"/register",
-    name: "register",
+    path: "/dashboard",
+    name: "Dashboard",
+    component: DashboardHome,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/register",
+    name: "Register",
     component: register,
-  }
-
+  },
 ];
 
 const router = new VueRouter({
@@ -43,4 +49,3 @@ const router = new VueRouter({
 });
 
 export default router;
-
