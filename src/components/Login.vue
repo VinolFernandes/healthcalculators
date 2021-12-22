@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -80,6 +80,14 @@ export default {
 </script>
 
 <style>
+#inspire{
+   background-color: indigo;
+  background:url('../assets/homebg.png') no-repeat center center;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+}
 .v-btn,
 .v-card {
   border-radius: 10px;
