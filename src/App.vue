@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <Navbar/>
+    <Landing/>
+    <!-- <Navbar/> -->
     <v-content class="ma-4">
       <router-view></router-view>
     </v-content>
@@ -9,15 +10,16 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar' 
-import Footer from '@/components/footer'
+// import Navbar from '@/components/Navbar' 
+// import Footer from '@/components/footer'
 // import firebas from "@/components/firebase.js";
-// import {auth } from"@/components/firebase";
+// import {auth } from"@/components/firebase
+import Landing from '@/components/Landing'
 
 // console.log(auth);
 export default {
-  components: {Navbar,
- Footer
+  components: {Landing,
+ 
 },
   name: "App",
   data() {

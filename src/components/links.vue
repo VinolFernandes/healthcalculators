@@ -4,7 +4,7 @@
       <v-card-text class="white--text pt-0 text-center py-5">
        Our website focuses on giving a user friendly experience in helping you find various health calculators according to your needs
       </v-card-text>
-      <v-divider></v-divider>
+      
       <v-col
         v-for="(link, i) in links"
         :key="i"
@@ -20,9 +20,7 @@
           v-text="link.text"
         />
       </v-col>
-
-      <v-spacer class="hidden-sm-and-down" />
-
+<v-spacer></v-spacer>
       <v-col
         cols="12"
         md="auto"
