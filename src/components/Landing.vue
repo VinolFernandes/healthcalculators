@@ -8,7 +8,8 @@
                 </div>
                 
                 <div class="text-center pa-5 my-auto">
-                    <v-btn class="indigo"  x-large route='/Login'>Get Started!</v-btn>
+                    
+                    <router-link to="/Login" tag="button" id="getstar"><v-btn class="indigo" x-large router :to="link.route">Get Started!</v-btn></router-link>
                 </div>
             </div>
         </div>
@@ -56,18 +57,25 @@
                 </div>
             </div>
         </div>
-       <Footer/>
+
 
     </div>
 </template>
 
 <script>
-import Footer from '@/components/footer'
+
 
 export default({
    components:{
-       Footer,
+    
    },
+   data(){
+       return{
+           link:[
+           {route:'/Login'},
+           ]
+       };
+   }
    
 })
 </script>
@@ -87,6 +95,8 @@ export default({
     min-height: 40%;
 }
 #healthcalc{
+    font-weight:400;
+    margin-top:150px;
     font-family: 'Courier New';
     color: ivory;
 }
@@ -94,4 +104,5 @@ export default({
     font-family: 'Courier New';
     color: ivory;
 }
+
 </style>

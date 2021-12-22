@@ -50,6 +50,12 @@
                 </v-btn>
               </v-card-actions>
             </v-card>
+            <v-divider></v-divider>
+            <v-container text-center>
+              <v-btn class="indigo"
+              text-center>
+              Sign in with Google</v-btn>
+            </v-container>
           </v-flex>
         </v-layout>
       </v-container>
