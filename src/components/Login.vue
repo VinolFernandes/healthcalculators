@@ -5,7 +5,7 @@
       :dark="darkTheme"
       id="inspire"
     >
-      <v-container>
+      <v-container class="py-15">
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
             <v-card elevation="4" dark class="indigo" tag="section">
