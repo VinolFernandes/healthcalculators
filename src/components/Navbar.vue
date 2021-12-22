@@ -1,4 +1,3 @@
-
 <template>
   <nav>
     <v-toolbar flat app color="indigo">
@@ -21,22 +20,32 @@
         </v-btn> -->
     </v-toolbar>
 
-    <v-navigation-drawer flat v-model="drawer" app floating width="300" absolute temporary class="indigo"
+    <v-navigation-drawer
+      flat
+      v-model="drawer"
+      app
+      floating
+      width="300"
+      absolute
+      temporary
+      class="indigo"
     >
-    <v-layout column align-center>
-      <v-flex class="mt-5">
+      <v-layout column align-center>
+        <v-flex class="mt-5">
           <v-avatar size="100">
             <v-img src="/img1.png" alt="Avatar"></v-img>
           </v-avatar>
           <p class="white--text">Username</p>
-      </v-flex>
-    </v-layout>
+        </v-flex>
+      </v-layout>
       <v-card class="mx-auto" width="256" tile> </v-card>
 
       <v-list>
         <v-list-item
-          v-for="link in links" :key="link.text"
-          router :to="link.route"
+          v-for="link in links"
+          :key="link.text"
+          router
+          :to="link.route"
         >
           <v-list-item-action>
             <v-icon class="white--text">{{ link.icon }}</v-icon>
@@ -53,7 +62,7 @@
       </v-flex> -->
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block flat>
+          <v-btn block flat @click="signOut()">
             Logout
             <v-icon right>mdi-logout</v-icon>
           </v-btn>
@@ -64,24 +73,35 @@
 </template>
 
 <script>
+import firebase from "firebase/compat/app";
 
-// import Popup from '@/components/popup';
-// import Login from "@/components/Login"
 export default {
-  components: {   },
+  components: {},
   data() {
     return {
       drawer: false,
-     
+
       //add webpages to links array
       links: [
-        { icon: "mdi-view-dashboard", text: "Dashboard", route: '/Dashboard' },
+        { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
         { icon: "mdi-account", text: "Account", route: "/account" },
-        { icon: "mdi-information-variant", text:"About us",route: "/About"},
-        { icon: "mdi-login", text: "Login" ,route: "/Login"},
-       
+        { icon: "mdi-information-variant", text: "About us", route: "/About" },
+        { icon: "mdi-login", text: "Login", route: "/Login" },
       ],
     };
+  },
+  methods: {
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          alert("Logged out");
+          this.$router.replace({
+            name: "Login",
+          });
+        });
+    },
   },
 };
 </script>

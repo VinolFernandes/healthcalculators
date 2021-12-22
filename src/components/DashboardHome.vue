@@ -86,9 +86,16 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+import { mapGetters } from "vuex";
 export default {
   components: {
     Navbar,
+  },
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user",
+    }),
   },
 };
 </script>

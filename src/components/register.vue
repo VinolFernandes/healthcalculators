@@ -45,7 +45,10 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn @keyup.enter="registerUser()" @click="registerUser()">
+                <v-btn
+                  v-on:keyup.enter="registerUser()"
+                  @click="registerUser()"
+                >
                   <v-icon dense left color="white">mdi-account-plus</v-icon>
                   Register</v-btn
                 >
@@ -85,8 +88,8 @@ export default {
         })
         .catch((err) => {
           this.error = err.message;
+          alert(this.error);
         });
-      alert(this.error);
     },
   },
 };

@@ -44,8 +44,8 @@
                   dark
                   flat
                   :medium="$vuetify.breakpoint.smAndUp"
-                  @keyup.enter="loginUser"
-                  @click="loginUser"
+                  @keypress.enter="loginUser"
+                  @click="loginEmail"
                 >
                   Sign in <v-icon right>mdi-login</v-icon>
                 </v-btn>
@@ -53,7 +53,7 @@
             </v-card>
             <v-divider></v-divider>
             <v-container text-center>
-              <v-btn class="indigo" dark text-center @on-click="signGoogle()"
+              <v-btn class="indigo" dark text-center @click="loginGoogle"
                 ><v-icon dense left color="white">mdi-google</v-icon> Sign in
                 with Google</v-btn
               >
@@ -81,7 +81,7 @@ export default {
   },
 
   methods: {
-    loginUser() {
+    loginEmail() {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.form.email, this.form.password)
@@ -91,6 +91,20 @@ export default {
         })
         .catch((err) => {
           this.error = err.message;
+        });
+    },
+    loginGoogle() {
+      const googleProvider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(googleProvider)
+        .then((data) => {
+          alert("Logged in with Google" + data.email);
+          this.$router.replace({ name: "Dashboard" });
+        })
+        .catch((err) => {
+          this.error = err.message;
+          alert(this.error);
         });
     },
   },
