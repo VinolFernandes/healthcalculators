@@ -44,7 +44,6 @@
                   dark
                   flat
                   :medium="$vuetify.breakpoint.smAndUp"
-                  @submit="auth.signInAnonymously()"
                 >
                   Login<v-icon right>mdi-login</v-icon>
                 </v-btn>
@@ -63,7 +62,7 @@
 export default {
   data() {
     return {
-    //  auth,
+      //  auth,
       darkTheme: true,
       platformName: "Login",
       password: "",
