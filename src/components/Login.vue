@@ -18,6 +18,7 @@
               </v-card-title>
               <v-divider></v-divider>
               <v-card-text>
+<<<<<<< HEAD
                 <p>Sign in with your Email and password:</p>
                 <v-form>
                   <v-text-field
@@ -26,35 +27,49 @@
                     type="text"
                     v-model="Email"
                     filled
+=======
+                <p>Sign in with your E-mail:</p>
+                <v-form>
+                  <v-text-field
+                    outline
+                    label="E-mail"
+                    type="text"
+                    v-model="form.email"
+>>>>>>> origin/backend
                   ></v-text-field>
                   <v-text-field
                     outline
                     hide-details
                     label="Password"
                     type="password"
+<<<<<<< HEAD
                     v-model="password"
                     filled
+=======
+                    v-model="form.password"
+>>>>>>> origin/backend
                   ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="indigo" flat> Forgot password? </v-btn>
+                <v-btn color="indigo" flat> Forgot password </v-btn>
                 <v-spacer></v-spacer>
                 <v-btn
                   color="indigo"
                   dark
                   flat
                   :medium="$vuetify.breakpoint.smAndUp"
-                  @submit="auth.signInAnonymously()"
+                  @keypress.enter="loginUser"
+                  @click="loginEmail"
                 >
-                  Sign in Anonymously<v-icon right>mdi-login</v-icon>
+                  Sign in <v-icon right>mdi-login</v-icon>
                 </v-btn>
               </v-card-actions>
             </v-card>
             <v-divider></v-divider>
             <v-container text-center>
-              <v-btn class="indigo" dark text-center @on-click="signGoogle()"
+              <v-btn class="indigo" dark text-center @click="loginGoogle"
                 ><v-icon dense left color="white">mdi-google</v-icon> Sign in
                 with Google</v-btn
               >
@@ -67,30 +82,48 @@
 </template>
 
 <script>
-// import { auth } from "@/components/firebase";
-// import firebase from "firebase";
-// let provider = new firebase.auth.GoogleAuthProvider();
-// firebase
-//   .auth()
-//   .signInWithPopup(provider)
-//   .then((result) => {
-//     let token = result.credential.accessToken;
-//     let user = result.user;
-//     console.log(token); // Token
-//     console.log(user); // User that was authenticated
-//   })
-//   .catch((err) => {
-//     console.log(err); // This will give you all the information needed to further debug any errors
-//   });
+import firebase from "firebase/compat/app";
+
 export default {
   data() {
     return {
-      //  auth,
       darkTheme: true,
       platformName: "Login",
-      password: "",
-      username: "",
+      form: {
+        email: "",
+        password: "",
+      },
+      error: null,
     };
+  },
+
+  methods: {
+    loginEmail() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.form.email, this.form.password)
+        .then((data) => {
+          alert("Welcome" + data.email + "You are now logged in");
+          this.$router.replace({ name: "Dashboard" });
+        })
+        .catch((err) => {
+          this.error = err.message;
+        });
+    },
+    loginGoogle() {
+      const googleProvider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(googleProvider)
+        .then((data) => {
+          alert("Logged in with Google" + data.email);
+          this.$router.replace({ name: "Dashboard" });
+        })
+        .catch((err) => {
+          this.error = err.message;
+          alert(this.error);
+        });
+    },
   },
 };
 </script>
@@ -98,7 +131,7 @@ export default {
 <style>
 #inspire {
   background-color: indigo;
-  background: url("../assets/homebg.png") no-repeat center center;
+  background: url("../assets/7.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

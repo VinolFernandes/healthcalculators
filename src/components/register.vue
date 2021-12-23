@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -21,16 +21,16 @@
                 <v-form>
                   <v-text-field
                     outline
-                    label="Full name"
+                    label="Name"
                     type="text"
-                    v-model="name"
+                    v-model="form.name"
                     filled
                   ></v-text-field>
-                   <v-text-field
+                  <v-text-field
                     outline
-                    label="Email"
+                    label="E-mail"
                     type="text"
-                    v-model="email"
+                    v-model="form.email"
                     filled
                   ></v-text-field>
                   <v-text-field
@@ -38,9 +38,10 @@
                     hide-details
                     label="Password"
                     type="password"
-                    v-model="password"
+                    v-model="form.password"
                     filled
                   ></v-text-field>
+<<<<<<< HEAD
                   <v-text-field
                     outline
                     hide-details
@@ -55,8 +56,21 @@
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }" >
                 <v-btn class="maroon" >Register</v-btn>
+=======
+                </v-form>
+              </v-card-text>
+              <v-divider></v-divider>
+              <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
+                <v-btn
+                  v-on:keyup.enter="registerUser()"
+                  @click="registerUser()"
+                >
+                  <v-icon dense left color="white">mdi-account-plus</v-icon>
+                  Register</v-btn
+                >
+>>>>>>> origin/backend
               </v-card-actions>
-            </v-card>   
+            </v-card>
           </v-flex>
         </v-layout>
       </v-container>
@@ -65,29 +79,46 @@
 </template>
 
 <script>
-// import { auth } from "@/components/firebase";
-
+import firebase from "firebase/compat/app";
 export default {
   data() {
     return {
-    //  auth,
       darkTheme: true,
       platformName: "Register",
-      password: "",
-      username: "",
-      email: "",
+      form: { password: "", name: "", email: "" },
+      error: null,
     };
+  },
+
+  methods: {
+    registerUser() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.form.email, this.form.password)
+        .then((data) => {
+          data.user
+            .updateProfile({
+              displayName: this.form.name,
+            })
+            .then(() => {});
+          alert(data.user.displayName);
+        })
+        .catch((err) => {
+          this.error = err.message;
+          alert(this.error);
+        });
+    },
   },
 };
 </script>
 
 <style>
-#inspire{
-   background-color: indigo;
-  background:url('../assets/homebg.png') no-repeat center center;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
+#inspire {
+  background-color: indigo;
+  background: url("../assets/homebg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .v-btn,
