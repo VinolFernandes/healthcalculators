@@ -29,13 +29,6 @@
           <v-main class="container">
             <div>
               <div>
-                <!-- <v-label
-              dark
-              v-model="weight"
-              class="col-xs-4 control-label font-weight-heavy"
-              >Weight <em>(in kg)</em></v-label
-            > -->
-
                 <v-radio-group v-model="gender" row>
                   <v-radio
                     clearable

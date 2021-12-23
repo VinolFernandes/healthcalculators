@@ -29,13 +29,6 @@
           <v-main class="container">
             <div>
               <div>
-                <!-- <v-label
-              dark
-              v-model="weight"
-              class="col-xs-4 control-label font-weight-heavy"
-              >Weight <em>(in kg)</em></v-label
-            > -->
-
                 <v-text-field
                   v-model="weight"
                   filled

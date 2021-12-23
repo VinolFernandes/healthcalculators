@@ -1,10 +1,6 @@
 <template>
   <v-container>
     <v-row align="center">
-      <!-- <v-card-text class="white--text pt-0 text-center py-5">
-       Our website focuses on giving a user friendly experience in helping you find various health calculators according to your needs
-      </v-card-text> -->
-
       <v-col
         v-for="(link, i) in links"
         :key="i"
@@ -55,7 +51,7 @@ export default {
       },
       {
         href: "https://www.linkedin.com/in/ranjan-ranjan-19a3bb1ab/",
-        text: "Ranjan",
+        text: "Ranjan Upadhya",
       },
     ],
   }),
@@ -74,7 +70,7 @@ export default {
 #linkcss a:focus,
 #linkcss a:active,
 #linkcss a {
-  background-color: #b4e7f8;
+  background-color: #00516d;
 }
 #contribcss {
   color: #b4e7f8;

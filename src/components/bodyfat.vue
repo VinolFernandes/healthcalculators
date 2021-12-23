@@ -29,12 +29,6 @@
           <v-main class="container">
             <div>
               <div>
-                <!-- <v-label
-              dark
-              v-model="weight"
-              class="col-xs-4 control-label font-weight-heavy"
-              >Weight <em>(in kg)</em></v-label
-            > -->
                 <v-radio-group v-model="gender" row>
                   <v-radio
                     clearable
@@ -80,30 +74,6 @@
                   label="Height (cm)"
                   class="form-control px-2"
                 />
-                <!-- <v-text-field
-                v-model="height"
-                clearable
-                filled
-                dense
-                label="Height (cm)"
-                class="form-control px-2"
-              />
-              <v-text-field
-                v-model="neck"
-                clearable
-                filled
-                dense
-                label="Neck (cm)"
-                class="form-control px-2"
-              />
-              <v-text-field
-                v-model="waist"
-                clearable
-                filled
-                dense
-                label="Waist(cm)"
-                class="form-control px-2"
-              /> -->
               </div>
               <div pa-4>
                 <v-btn class="info ml-15" @click="calculatebodyfat"
