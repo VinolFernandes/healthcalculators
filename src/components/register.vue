@@ -11,7 +11,7 @@
             <v-card elevation="4" dark class="indigo" tag="section">
               <v-card-title align-center>
                 <v-layout align-center justify-space-between>
-                  <h3 class="headline">
+                  <h3 class="h2">
                     {{ platformName }}
                   </h3>
                 </v-layout>
@@ -45,8 +45,10 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <router-link to="/Login" tag="button"><v-btn class="blue accent-3" flat>
-                  <v-icon dense left color="white">mdi-login</v-icon> Login </v-btn>
+                <router-link to="/Login" tag="button"
+                  ><v-btn class="blue accent-3" flat>
+                    <v-icon dense left color="white">mdi-login</v-icon> Login
+                  </v-btn>
                 </router-link>
                 <v-spacer></v-spacer>
                 <v-btn
@@ -60,7 +62,6 @@
                 >
               </v-card-actions>
             </v-card>
-            
           </v-flex>
         </v-layout>
       </v-container>
@@ -91,7 +92,8 @@ export default {
               displayName: this.form.name,
             })
             .then(() => {});
-          alert(data.user.displayName);
+          alert("New User:" + data.user.displayName);
+          this.$router.replace({ name: "Login" });
         })
         .catch((err) => {
           this.error = err.message;
@@ -103,7 +105,6 @@ export default {
 </script>
 
 <style>
-
 #inspire {
   background-color: indigo;
   background: url("../assets/69.png") no-repeat center center;
