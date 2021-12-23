@@ -67,6 +67,7 @@
 
 <script>
 import firebase from "firebase/compat/app";
+
 export default {
   data() {
     return {
@@ -114,7 +115,7 @@ export default {
 <style>
 #inspire {
   background-color: indigo;
-  background: url("../assets/homebg.png") no-repeat center center;
+  background: url("../assets/7.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
