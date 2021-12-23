@@ -5,17 +5,17 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <!-- <Footer /> -->
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import Footer from "@/components/footer";
+import Footer from "@/components/footer";
 // import Landing from '@/components/Landing'
 
 export default {
   components: {
-    // Footer
+    Footer
   },
   name: "App",
   data() {

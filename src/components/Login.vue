@@ -22,12 +22,14 @@
                 <v-form>
                   <v-text-field
                     outline
+                    filled
                     label="E-mail"
                     type="text"
                     v-model="form.email"
                   ></v-text-field>
                   <v-text-field
                     outline
+                    filled
                     hide-details
                     label="Password"
                     type="password"
@@ -37,10 +39,12 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn color="indigo" flat> Forgot password </v-btn>
+                <router-link to="/register" tag="button" id="getstar"><v-btn class="blue accent-3" flat>
+                  <v-icon dense left color="white">mdi-account-plus</v-icon> Register </v-btn>
+                </router-link>
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="indigo"
+                  class="blue accent-3"
                   dark
                   flat
                   :medium="$vuetify.breakpoint.smAndUp"

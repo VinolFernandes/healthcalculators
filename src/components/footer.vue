@@ -1,13 +1,14 @@
 <template>
 <v-footer
     id="default-footer"
-    color="indigo"
+    color="rgb(65,61,69)"
     padless
   >
     <v-card
       flat
       tile
-      class="indigo white--text text-center"
+      class=" white--text text-center"
+      color="rgb(65,61,69)"
     >
       <v-card-text>
         <v-btn
@@ -42,4 +43,25 @@ export default ({
 })
 </script>
 
+<style scoped>
+
+#inspire{
+  background:url('../assets/69.png') no-repeat center center;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+}
+.v-btn,
+.v-card {
+  border-radius: 10px;
+}
+
+.v-card__title {
+  text-transform: uppercase;
+}
+#regbtn{
+  margin-left: 260px;
+}
+</style>
   

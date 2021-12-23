@@ -86,7 +86,6 @@ export default {
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
         { icon: "mdi-account", text: "Account", route: "/account" },
         { icon: "mdi-information-variant", text: "About us", route: "/About" },
-        { icon: "mdi-login", text: "Login", route: "/Login" },
       ],
     };
   },

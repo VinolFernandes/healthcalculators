@@ -9,7 +9,7 @@
                 
                 <div class="text-center pa-5 my-auto">
                     
-                    <router-link to="/register" tag="button" id="getstar"><v-btn class="indigo" x-large router :to="link.route">Get Started!</v-btn></router-link>
+                    <router-link to="/register" tag="button" id="getstar"><v-btn color="rgb(214, 69, 209)" x-large router :to="link.route">Get Started!</v-btn></router-link>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@ export default({
 }
 #home-page{
     background-color: indigo;
-    background:url('../assets/homebg.png') no-repeat center center;
+    background:url('../assets/2.png') no-repeat center center;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -98,11 +98,12 @@ export default({
     font-weight:400;
     margin-top:150px;
     font-family: 'Courier New';
-    color: ivory;
+     color:rgb(214, 69, 209);
 }
 #tracky{
     font-family: 'Courier New';
     color: ivory;
+    margin-top: 20px;
 }
 
 </style>

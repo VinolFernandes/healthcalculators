@@ -45,15 +45,22 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
+                <router-link to="/Login" tag="button"><v-btn class="blue accent-3" flat>
+                  <v-icon dense left color="white">mdi-login</v-icon> Login </v-btn>
+                </router-link>
+                <v-spacer></v-spacer>
                 <v-btn
                   v-on:keyup.enter="registerUser()"
                   @click="registerUser()"
+                  id="regbtn"
+                  class="blue accent-3"
                 >
                   <v-icon dense left color="white">mdi-account-plus</v-icon>
                   Register</v-btn
                 >
               </v-card-actions>
             </v-card>
+            
           </v-flex>
         </v-layout>
       </v-container>
@@ -96,9 +103,10 @@ export default {
 </script>
 
 <style>
+
 #inspire {
   background-color: indigo;
-  background: url("../assets/homebg.png") no-repeat center center;
+  background: url("../assets/69.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
