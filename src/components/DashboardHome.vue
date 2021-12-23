@@ -38,15 +38,7 @@
             <v-card-actions>
               <div class="overline ml-2">Your BMR is : {{ bmi }} calorie</div>
               <v-spacer></v-spacer>
-              <v-btn
-                outlined
-                color="teal lighten-3"
-                dark
-                v-on="on"
-                small
-                @click="showBMI()"
-                >Update</v-btn
-              >
+              <v-flex class="align-center"><BMR /></v-flex>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -63,9 +55,7 @@
                 Your Ideal Weight is : {{ bmi }} KG
               </div>
               <v-spacer></v-spacer>
-              <v-btn outlined color="teal lighten-3" dark v-on="on" small
-                >Update</v-btn
-              >
+              <v-flex class="align-center"><Calculator /></v-flex>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -80,9 +70,7 @@
             <v-card-actions>
               <div class="overline ml-2">Your Body fat is : {{ bmi }}%</div>
               <v-spacer></v-spacer>
-              <v-btn outlined color="teal lighten-3" dark v-on="on" small
-                >Update</v-btn
-              >
+              <v-flex class="align-center"><bodyfat /></v-flex>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -96,10 +84,17 @@ import Navbar from "@/components/Navbar";
 import { mapGetters } from "vuex";
 
 import BMI from "@/components/BMI";
+import BMR from "@/components/BMR";
+import Calculator from "@/components/Calculator";
+import bodyfat from "@/components/bodyfat";
+
 export default {
   components: {
     Navbar,
     BMI,
+    BMR,
+    bodyfat,
+    Calculator,
   },
   methods: {
     showBMI() {},
