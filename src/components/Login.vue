@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="parallax">
     <v-app
       :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }"
       :dark="darkTheme"
@@ -11,7 +11,7 @@
             <v-card elevation="4" dark class="indigo" tag="section">
               <v-card-title>
                 <v-layout align-center justify-space-between>
-                  <h3 class="headline">
+                  <h3 class="h2">
                     {{ platformName }}
                   </h3>
                 </v-layout>
@@ -39,8 +39,11 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <router-link to="/register" tag="button" id="getstar"><v-btn class="blue accent-3" flat>
-                  <v-icon dense left color="white">mdi-account-plus</v-icon> Register </v-btn>
+                <router-link to="/register" tag="button" id="getstar"
+                  ><v-btn class="blue accent-3" flat>
+                    Register
+                    <v-icon dense right color="white">mdi-account-plus</v-icon>
+                  </v-btn>
                 </router-link>
                 <v-spacer></v-spacer>
                 <v-btn
@@ -91,7 +94,7 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.form.email, this.form.password)
         .then((data) => {
-          alert("Welcome" + data.email + "You are now logged in");
+          alert("Welcome " + data.user.displayName + " You are now logged in");
           this.$router.replace({ name: "Dashboard" });
         })
         .catch((err) => {
