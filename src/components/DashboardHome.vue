@@ -1,12 +1,12 @@
 <template>
   <div>
     <Navbar />
-    <v-flex sm6 xs12 md3>
+    <v-flex class="align-center">
       <v-avatar size="80px">
         <v-img src="person.avatar"></v-img>
       </v-avatar>
       <span>
-        <h1 class="mx-auto-align pa-5">Welcome to your Dashboard!</h1></span
+        <h1 class="pa-5" id="weldas">Welcome to your Dashboard!</h1></span
       >
     </v-flex>
     <v-container>
@@ -15,7 +15,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="overline text-left">BMI</div>
+                <div class="verline text-left">BMI</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -108,3 +108,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+#weldas{
+  margin-left:500px ;
+}
+</style>
