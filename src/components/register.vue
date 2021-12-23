@@ -9,7 +9,7 @@
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
             <v-card elevation="4" dark class="indigo" tag="section">
-              <v-card-title>
+              <v-card-title align-center>
                 <v-layout align-center justify-space-between>
                   <h3 class="headline">
                     {{ platformName }}
@@ -48,13 +48,13 @@
                     type="password"
                     v-model="password"
                     filled
-                    class="mt-5"
+                    class="mt-7"
                   ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-divider></v-divider>
-              <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
-                <v-btn >Register</v-btn>
+              <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }" >
+                <v-btn class="maroon" >Register</v-btn>
               </v-card-actions>
             </v-card>   
           </v-flex>
