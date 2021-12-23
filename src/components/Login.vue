@@ -18,13 +18,14 @@
               </v-card-title>
               <v-divider></v-divider>
               <v-card-text>
-                <p>Sign in with your username and password:</p>
+                <p>Sign in with your Email and password:</p>
                 <v-form>
                   <v-text-field
                     outline
-                    label="Username"
+                    label="Email"
                     type="text"
-                    v-model="username"
+                    v-model="Email"
+                    filled
                   ></v-text-field>
                   <v-text-field
                     outline
@@ -32,6 +33,7 @@
                     label="Password"
                     type="password"
                     v-model="password"
+                    filled
                   ></v-text-field>
                 </v-form>
               </v-card-text>
