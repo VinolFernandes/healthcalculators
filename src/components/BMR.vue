@@ -13,7 +13,13 @@
         >
       </template>
       <v-flex>
-        <v-card max-width="400" elevation="4" dark class="indigo mx-auto">
+        <v-card
+          height="100%"
+          max-width="400"
+          elevation="4"
+          dark
+          class="indigo mx-auto"
+        >
           <v-card-title>
             <span class="font-size-heavy display-1">
               BMR Calculator

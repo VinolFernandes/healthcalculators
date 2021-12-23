@@ -122,15 +122,17 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+
+  background-position: 50% 50%;
 }
 #about {
   min-height: 40%;
 }
 #healthcalc {
-  /* font-weight: 400;
-  margin-top: 150px;
-  font-family: "Courier New";
-  color: rgb(214, 69, 209); */
   margin: 1em 0 0.5em 0;
   color: rgb(148, 54, 145);
 
@@ -142,19 +144,6 @@ export default {
   text-shadow: 0 2px white, 0 3px #777;
 }
 #tracky {
-  /* color: rgb(55, 15, 66);
-  margin-top: 20px;
-
-  font-weight: 600;
-  font-family: "";
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 2em;
-
-  font-size: 1rem; */
-
   margin: 1em 0 0.5em 0;
   color: rgb(214, 69, 209);
   font-weight: 500;

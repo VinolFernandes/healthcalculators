@@ -8,16 +8,6 @@
         <span class="font-weight-heavy">Calculator</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <!-- <v-btn
-          float-right
-            text="Login"
-            route= "/Login">
-           Login</v-btn>
-           <Login /> -->
-      <!-- <v-btn flat color="white darken-3">
-          <span right>Sign Out</span>
-          <v-icon right>mdi-exit-to-app</v-icon>
-        </v-btn> -->
     </v-toolbar>
 
     <v-navigation-drawer
@@ -57,9 +47,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <!-- <v-flex class='mt-4 mb-4'>
-          <Popup/>
-      </v-flex> -->
+
       <template v-slot:append>
         <div class="pa-2">
           <v-btn block flat @click="signOut()">
@@ -85,7 +73,7 @@ export default {
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
         { icon: "mdi-account", text: "Account", route: "/account" },
-        { icon: "mdi-information-variant", text: "About us", route: "/About" },
+        { icon: "mdi-information-variant", text: "About", route: "/About" },
       ],
     };
   },

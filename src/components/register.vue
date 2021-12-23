@@ -107,11 +107,16 @@ export default {
 <style>
 #inspire {
   background-color: indigo;
-  background: url("../assets/69.png") no-repeat center center;
+  background: url("../assets/8.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  background-position: 50% 50%;
 }
 .v-btn,
 .v-card {

@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <v-app id="dashboardbg">
     <Navbar />
     <v-flex class="align-center">
       <v-avatar size="80px">
         <v-img src="person.avatar"></v-img>
       </v-avatar>
-      <span>
-        <h1 class="pa-5" id="weldas">Welcome to your Dashboard!</h1></span
-      >
+      <span> <h1 class="pa-5" id="weldas">Welcome to your Dashboard!</h1></span>
     </v-flex>
     <v-container>
       <v-layout row wrap col>
@@ -76,7 +74,7 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -109,7 +107,20 @@ export default {
 };
 </script>
 <style scoped>
-#weldas{
-  margin-left:500px ;
+#weldas {
+  margin-left: 500px;
+}
+#dashboardbg {
+  background-color: indigo;
+  background: url("../assets/7.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  background-position: 50% 50%;
 }
 </style>
