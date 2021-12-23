@@ -31,7 +31,7 @@
                   light
                   clearable
                   label="Weight (kg)"
-                  class="form-control"
+                  class="px-5 form-control"
                 />
 
                 <v-text-field
@@ -41,7 +41,7 @@
                   light
                   dense
                   label="Height (cm)"
-                  class="form-control"
+                  class="px-5 form-control"
                 />
               </div>
               <div pa-4>
