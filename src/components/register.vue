@@ -41,22 +41,6 @@
                     v-model="form.password"
                     filled
                   ></v-text-field>
-<<<<<<< HEAD
-                  <v-text-field
-                    outline
-                    hide-details
-                    label="Confirm Password"
-                    type="password"
-                    v-model="password"
-                    filled
-                    class="mt-7"
-                  ></v-text-field>
-                </v-form>
-              </v-card-text>
-              <v-divider></v-divider>
-              <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }" >
-                <v-btn class="maroon" >Register</v-btn>
-=======
                 </v-form>
               </v-card-text>
               <v-divider></v-divider>
@@ -68,7 +52,6 @@
                   <v-icon dense left color="white">mdi-account-plus</v-icon>
                   Register</v-btn
                 >
->>>>>>> origin/backend
               </v-card-actions>
             </v-card>
           </v-flex>
