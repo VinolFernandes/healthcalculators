@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-dialog max-width="600px">
+    <v-dialog max-width="400">
       <template v-slot:activator="{ on }">
         <v-btn
           slot="activator"
@@ -24,17 +24,11 @@
           <v-main class="container">
             <div>
               <div>
-                <!-- <v-label
-              dark
-              v-model="weight"
-              class="col-xs-4 control-label font-weight-heavy"
-              >Weight <em>(in kg)</em></v-label
-            > -->
-
                 <v-text-field
                   v-model="weight"
                   filled
                   dense
+                  light
                   clearable
                   label="Weight (kg)"
                   class="form-control"
@@ -44,6 +38,7 @@
                   v-model="height"
                   clearable
                   filled
+                  light
                   dense
                   label="Height (cm)"
                   class="form-control"
