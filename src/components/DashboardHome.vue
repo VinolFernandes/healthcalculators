@@ -14,7 +14,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="verline text-left">BMI</div>
+                <div class="title text-left">BMI</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -30,7 +30,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="overline text-left">BMR</div>
+                <div class="title text-left">BMR</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -45,7 +45,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="overline text-left">Ideal Weight:</div>
+                <div class="title text-left">Ideal Weight</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -62,7 +62,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="overline text-left">Body Fat</div>
+                <div class="title text-left">Body Fat</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
