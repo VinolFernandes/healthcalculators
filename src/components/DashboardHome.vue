@@ -88,9 +88,9 @@ import idealw from "@/components/idealw";
 import bodyfat from "@/components/bodyfat";
 
 export default {
-  data(){
+  data() {
     let bmi = result;
-  }
+  },
   components: {
     Navbar,
     BMI,
