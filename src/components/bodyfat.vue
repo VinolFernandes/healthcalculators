@@ -5,7 +5,7 @@
         <v-btn
           slot="activator"
           outlined
-          color="teal lighten-3"
+          color="blue lighten-3"
           dark
           v-on="on"
           small
@@ -18,7 +18,8 @@
           max-width="400"
           elevation="4"
           dark
-          class="indigo mx-auto"
+          color="#0C6FF9"
+          class="mx-auto"
         >
           <v-card-title>
             <span class="font-size-heavy display-1">

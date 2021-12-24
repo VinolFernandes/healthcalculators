@@ -8,7 +8,7 @@
       <v-container class="py-15">
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
-            <v-card elevation="4" dark class="indigo" tag="section">
+            <v-card elevation="4" dark color="#FF882D" tag="section">
               <v-card-title align-center>
                 <v-layout align-center justify-space-between>
                   <h3 class="h2">
@@ -46,7 +46,7 @@
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
                 <router-link to="/Login" tag="button"
-                  ><v-btn class="blue accent-3" flat>
+                  ><v-btn class="blue lighten-1" flat>
                     <v-icon dense left color="white">mdi-login</v-icon> Login
                   </v-btn>
                 </router-link>
@@ -55,7 +55,7 @@
                   v-on:keyup.enter="registerUser()"
                   @click="registerUser()"
                   id="regbtn"
-                  class="blue accent-3"
+                  class="blue lighten-1"
                 >
                   <v-icon dense left color="white">mdi-account-plus</v-icon>
                   Register</v-btn

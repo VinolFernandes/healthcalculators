@@ -5,7 +5,8 @@
       <v-avatar size="80px">
         <v-img src="person.avatar"></v-img>
       </v-avatar>
-      <span> <h1 class="pa-5" id="weldas">Welcome to your Dashboard!</h1></span>
+
+      <span> <h1 class="display-4" id="weldas">Dashboard</h1></span>
     </v-flex>
     <v-container>
       <v-layout row wrap col>
@@ -29,7 +30,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="pverline text-left">BMR</div>
+                <div class="overline text-left">BMR</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -44,7 +45,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="pverline text-left">Ideal Weight:</div>
+                <div class="overline text-left">Ideal Weight:</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -61,7 +62,7 @@
           <v-card class="ma-3">
             <v-list-item>
               <v-list-item-content>
-                <div class="pverline text-left">Body Fat</div>
+                <div class="overline text-left">Body Fat</div>
                 <div><v-divider></v-divider></div>
               </v-list-item-content>
             </v-list-item>
@@ -108,7 +109,15 @@ export default {
 </script>
 <style scoped>
 #weldas {
-  margin-left: 500px;
+  margin: 1em 0 0.5em 0;
+  color: #faf6f4;
+  padding: 0.9em;
+  font-weight: 900;
+  font-family: "Ultra", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  text-shadow: 0 2px #0c6ff9, 0 3px #777;
 }
 #dashboardbg {
   background-color: indigo;

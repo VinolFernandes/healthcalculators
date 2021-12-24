@@ -1,7 +1,13 @@
 <template>
   <div>
     <v-flex>
-      <v-card max-width="400" elevation="4" dark class="indigo mx-auto">
+      <v-card
+        max-width="400"
+        elevation="4"
+        dark
+        color="#0C6FF9"
+        class="mx-auto"
+      >
         <v-card-title>
           <span class="font-size-heavy display-1">
             Ideal Weight Calculator
@@ -11,12 +17,6 @@
         <v-main class="container">
           <div>
             <div>
-              <!-- <v-label
-              dark
-              v-model="weight"
-              class="col-xs-4 control-label font-weight-heavy"
-              >Weight <em>(in kg)</em></v-label
-            > -->
               <v-radio-group v-model="gender" row>
                 <v-radio
                   clearable
@@ -43,14 +43,6 @@
                 label="Height (cm)"
                 class="form-control px-4"
               />
-              <!-- <v-text-field
-                v-model="Age"
-                filled
-                dense
-                clearable
-                label="Age"
-                class="form-control pa-4"
-              /> -->
             </div>
             <div pa-4>
               <v-btn class="info ml-15" @click="calculateidealw"

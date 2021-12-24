@@ -8,7 +8,7 @@
       <v-container class="py-15">
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
-            <v-card elevation="4" dark class="indigo" tag="section">
+            <v-card elevation="4" dark color="#FF882D" tag="section">
               <v-card-title>
                 <v-layout align-center justify-space-between>
                   <h3 class="h2">
@@ -40,14 +40,14 @@
               <v-divider></v-divider>
               <v-card-actions :class="{ 'pa-3': $vuetify.breakpoint.smAndUp }">
                 <router-link to="/register" tag="button" id="getstar"
-                  ><v-btn class="blue accent-3" flat>
+                  ><v-btn class="blue lighten-1" flat>
                     Register
                     <v-icon dense right color="white">mdi-account-plus</v-icon>
                   </v-btn>
                 </router-link>
                 <v-spacer></v-spacer>
                 <v-btn
-                  class="blue accent-3"
+                  class="blue lighten-1"
                   dark
                   flat
                   :medium="$vuetify.breakpoint.smAndUp"
@@ -60,7 +60,11 @@
             </v-card>
             <v-divider></v-divider>
             <v-container text-center>
-              <v-btn class="indigo" dark text-center @click="loginGoogle"
+              <v-btn
+                class="blue lighten-1"
+                dark
+                text-center
+                @click="loginGoogle"
                 ><v-icon dense left color="white">mdi-google</v-icon> Sign in
                 with Google</v-btn
               >

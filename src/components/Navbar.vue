@@ -1,11 +1,11 @@
 <template>
   <nav>
-    <v-toolbar flat app color="indigo">
+    <v-toolbar flat app color="#0C6FF9">
       <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer">
       </v-app-bar-nav-icon>
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
         <span class="font-weight-light">Health</span>
-        <span class="font-weight-heavy">Calculator</span>
+        <span class="font-weight-heavy">Calculators</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -18,7 +18,7 @@
       width="300"
       absolute
       temporary
-      class="indigo"
+      color="#0C6FF9"
     >
       <v-layout column align-center>
         <v-flex class="mt-5">
