@@ -72,7 +72,7 @@ export default {
       //add webpages to links array
       links: [
         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
-        { icon: "mdi-account", text: "Account", route: "/account" },
+        { icon: "mdi-account", text: "Account", route: "/AccountPage" },
         { icon: "mdi-information-variant", text: "About", route: "/About" },
       ],
     };
