@@ -22,7 +22,7 @@
           class="mx-auto"
         >
           <v-card-title>
-            <span class="font-size-heavy display-1">
+            <span class="font-size-heavy" style="font-size:30px">
               Body Fat Calculator
             </span></v-card-title
           >
@@ -36,7 +36,7 @@
                     filled
                     dense
                     label="Male"
-                    class="form-control ml-4 px-2"
+                    class=" ml-4 px-2"
                     value="male"
                   />
                   <v-radio
@@ -44,7 +44,7 @@
                     filled
                     dense
                     label="Female"
-                    class="form-control"
+                   
                     value="female"
                   />
                 </v-radio-group>
@@ -55,7 +55,7 @@
                   dense
                   clearable
                   label="Age"
-                  class="form-control px-2"
+                  class=" px-2"
                 />
 
                 <v-text-field
@@ -64,7 +64,7 @@
                   dense
                   clearable
                   label="Weight (kg)"
-                  class="form-control px-2"
+                  class=" px-2"
                 />
 
                 <v-text-field
@@ -73,15 +73,15 @@
                   filled
                   dense
                   label="Height (cm)"
-                  class="form-control px-2"
+                  class=" px-2"
                 />
               </div>
               <div pa-4>
-                <v-btn class="info ml-15" @click="calculatebodyfat"
+                <v-btn class="ml-15" light @click="calculatebodyfat"
                   ><v-icon left>mdi-calculator</v-icon> Calculate
                 </v-btn>
 
-                <v-btn class="info ml-4" @click="save"
+                <v-btn class="ml-4" light @click="save"
                   ><v-icon left>mdi-content-save</v-icon> Save
                 </v-btn>
               </div>

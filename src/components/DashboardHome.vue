@@ -35,7 +35,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-card-actions>
-              <div class="overline ml-2">Your BMR is : {{ bmi }} calorie</div>
+              <div class="overline ml-2">Your BMR is : {{ bmi }} (calorie)</div>
               <v-spacer></v-spacer>
               <v-flex class="align-center"><BMR /></v-flex>
             </v-card-actions>
@@ -51,10 +51,10 @@
             </v-list-item>
             <v-card-actions>
               <div class="overline ml-2">
-                Your Ideal Weight is : {{ bmi }} KG
+                Your Ideal Weight is : {{ bmi }} (KG)
               </div>
               <v-spacer></v-spacer>
-              <v-flex class="align-center"><Calculator /></v-flex>
+              <v-flex class="align-center"><idealw /></v-flex>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -67,7 +67,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-card-actions>
-              <div class="overline ml-2">Your Body fat is : {{ bmi }}%</div>
+              <div class="overline ml-2">Your Body fat is : {{ bmi }}(%)</div>
               <v-spacer></v-spacer>
               <v-flex class="align-center"><bodyfat /></v-flex>
             </v-card-actions>
@@ -84,7 +84,7 @@ import { mapGetters } from "vuex";
 
 import BMI from "@/components/BMI";
 import BMR from "@/components/BMR";
-import Calculator from "@/components/Calculator";
+import idealw from "@/components/idealw";
 import bodyfat from "@/components/bodyfat";
 
 export default {
@@ -93,7 +93,7 @@ export default {
     BMI,
     BMR,
     bodyfat,
-    Calculator,
+    idealw,
   },
   methods: {
     showBMI() {},

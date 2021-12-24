@@ -37,7 +37,7 @@
                   dense
                   clearable
                   label="Weight (kg)"
-                  class="px-5 form-control"
+                  class="px-5"
                 />
 
                 <v-text-field
@@ -46,11 +46,11 @@
                   filled
                   dense
                   label="Height (cm)"
-                  class="px-5 form-control"
+                  class="px-5"
                 />
               </div>
               <div pa-4>
-                <v-btn class="info ml-15" @click="calculatebmi"
+                <v-btn class="white ml-15" light @click="calculatebmi"
                   ><v-icon left>mdi-calculator</v-icon> Calculate
                 </v-btn>
 
