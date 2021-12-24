@@ -89,7 +89,7 @@ import bodyfat from "@/components/bodyfat";
 
 export default {
   data() {
-    let bmi = result;
+    // let bmi = result;
   },
   components: {
     Navbar,
