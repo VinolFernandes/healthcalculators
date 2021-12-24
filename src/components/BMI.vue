@@ -54,7 +54,7 @@
                   ><v-icon left>mdi-calculator</v-icon> Calculate
                 </v-btn>
 
-                <v-btn class="info ml-4" @click="save"
+                <v-btn class="info ml-4" @click="saveBMI"
                   ><v-icon left>mdi-content-save</v-icon> Save
                 </v-btn>
               </div>
@@ -70,32 +70,50 @@
 </template>
 
 <script>
-// import { db } from "../main";
-// import { fn } from "../main";
-
+import { db } from "../main";
+// import firestore from "firebase/firestore";
 export default {
   data() {
     return {
       weight: "",
       height: "",
       result: "",
+      usersBMI: [],
+      newUserBMI: "",
     };
   },
+
+  firestore() {
+    return {
+      usersBMI: db.collection("usersBMI"),
+    };
+  },
+
   methods: {
     calculatebmi() {
       let weight = parseFloat(this.weight);
       let height = parseFloat(this.height) / 100;
       this.result = parseFloat(weight / (height * height)).toFixed(2);
     },
-
     saveBMI() {
-      //       String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-      // FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
-      // DocumentReference uidRef = rootRef.collection("users").document(uid);
-      // POJO pojo = new POJO();
-      // uidRef.set(pojo);
+      let newUserBMI = this.result;
+      this.$firestore.users.add({
+        bmi: newUserBMI,
+        timestamp: new Date(),
+      });
+      this.newUserBMI = "";
     },
   },
+
+  //       String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+  // FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
+  // DocumentReference uidRef = rootRef.collection("users").document(uid);
+
+  // async saveBMI() {
+  //         let ref = await db.collection("users");
+  //         ref.where("user_id", "==", firebase.auth().currentUser.uid).add({
+  //             newInput: this.newInput
+  //         });
 };
 </script>
 

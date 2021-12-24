@@ -13,7 +13,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import { firestorePlugin } from "vuefire";
-import "firebase/compat/functions";
+import VueFirestore from "vue-firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA6lV7YOjgy3u_EdFaPPZp2lqeFFYDB-oo",
@@ -31,12 +31,12 @@ firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged((user) => {
   store.dispatch("fetchUser", user);
 });
+Vue.use(VueFirestore);
 
 Vue.use(firestorePlugin);
 Vue.config.productionTip = false;
 
 export const db = firebase.firestore();
-export const fn = firebase.functions();
 new Vue({
   router,
   vuetify,
