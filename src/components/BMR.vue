@@ -36,7 +36,7 @@
                     filled
                     dense
                     label="Male"
-                    class=" ml-4"
+                    class="ml-4"
                     value="male"
                   />
                   <v-radio
@@ -54,7 +54,7 @@
                   dense
                   clearable
                   label="Age"
-                  class=" px-2"
+                  class="px-2"
                 />
 
                 <v-text-field
@@ -63,7 +63,7 @@
                   dense
                   clearable
                   label="Weight (kg)"
-                  class=" px-2"
+                  class="px-2"
                 />
 
                 <v-text-field
@@ -72,7 +72,7 @@
                   filled
                   dense
                   label="Height (cm)"
-                  class=" px-2"
+                  class="px-2"
                 />
               </div>
               <div pa-4>
@@ -86,8 +86,8 @@
               </div>
             </div>
             <v-banner sticky class="result">
-              <span class="font-size-heavy title" v-bind="result">
-                Basal Metabolic Rate:
+              <span class="font-size-heavy title">
+                Basal Metabolic Rate: {{ result }}
               </span>
             </v-banner>
           </v-main>

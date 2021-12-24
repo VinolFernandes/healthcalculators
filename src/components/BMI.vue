@@ -54,7 +54,7 @@
                   ><v-icon left>mdi-calculator</v-icon> Calculate
                 </v-btn>
 
-                <v-btn class="info ml-4" @click="saveBMI"
+                <v-btn class="ml-4" light @click="saveBMI"
                   ><v-icon left>mdi-content-save</v-icon> Save
                 </v-btn>
               </div>
