@@ -112,38 +112,38 @@ export default {
   // CALCULATEBMR NOT WORKING PLEASE FIX
   methods: {
     calculatebmr() {
-      let gender = this.gender;
-
-      let height = parseFloat(this.height);
-      let weight = parseFloat(this.weight);
-      let age = parseFloat(this.age);
-      if (gender == "male") {
-        this.result = parseFloat(
-          370 +
-            21.6(
-              1 -
-                parseFloat(
-                  1.2 * parseFloat(weight / (height * height)) +
-                    0.23 * age -
-                    16.2
-                )
-            ) *
-              weight
-        );
-      } else if (gender == "female") {
-        this.result = parseFloat(
-          370 +
-            21.6(
-              1 -
-                parseFloat(
-                  1.2 * parseFloat(weight / (height * height)) +
-                    0.23 * age -
-                    5.4
-                )
-            ) *
-              weight
-        );
-      }
+      // let gender = this.gender;
+      // let height = parseFloat(this.height);
+      // let weight = parseFloat(this.weight);
+      // let age = parseFloat(this.age);
+      // if (gender == "male") {
+      //   this.result = parseFloat(
+      //     370 +
+      //       21.6(
+      //         1 -
+      //           parseFloat(
+      //             1.2 * parseFloat(weight / (height * height)) +
+      //               0.23 * age -
+      //               16.2
+      //           )
+      //       ) *
+      //         weight
+      //   );
+      // } else if (gender == "female") {
+      //   this.result = parseFloat(
+      //     370 +
+      //       21.6(
+      //         1 -
+      //           parseFloat(
+      //             1.2 * parseFloat(weight / (height * height)) +
+      //               0.23 * age -
+      //               5.4
+      //           )
+      //       ) *
+      //         weight
+      //   );
+      // }
+      // let result = parseFloat("40392");
     },
   },
 };

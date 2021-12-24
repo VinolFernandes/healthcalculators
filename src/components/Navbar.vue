@@ -20,14 +20,14 @@
       temporary
       color="#0C6FF9"
     >
-      <v-layout column align-center>
+      <!-- <v-layout column align-center>
         <v-flex class="mt-5">
           <v-avatar size="100">
-            <v-img src="/img1.png" alt="Avatar"></v-img>
+            <v-img src="src/assets/1.png" alt="Avatar"></v-img>
           </v-avatar>
           <p class="white--text">Username</p>
         </v-flex>
-      </v-layout>
+      </v-layout> -->
       <v-card class="mx-auto" width="256" tile> </v-card>
 
       <v-list>

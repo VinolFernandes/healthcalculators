@@ -35,7 +35,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-card-actions>
-              <div class="overline ml-2">Your BMR is : {{ bmi }} (calorie)</div>
+              <div class="overline ml-2">Your BMR is : {{ bmr }} (calorie)</div>
               <v-spacer></v-spacer>
               <v-flex class="align-center"><BMR /></v-flex>
             </v-card-actions>
@@ -67,7 +67,7 @@
               </v-list-item-content>
             </v-list-item>
             <v-card-actions>
-              <div class="overline ml-2">Your Body fat is : {{ bmi }}(%)</div>
+              <div class="overline ml-2">Your Body fat is (%) : {{ bfp }}</div>
               <v-spacer></v-spacer>
               <v-flex class="align-center"><bodyfat /></v-flex>
             </v-card-actions>
@@ -88,6 +88,9 @@ import idealw from "@/components/idealw";
 import bodyfat from "@/components/bodyfat";
 
 export default {
+  data(){
+    let bmi = result;
+  }
   components: {
     Navbar,
     BMI,

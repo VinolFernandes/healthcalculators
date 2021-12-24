@@ -5,7 +5,9 @@
       <span> <h1 class="display-4" id="accounthead">Account</h1></span>
     </div>
 
-    <v-container class="my-6" id="dashboard-view" tag="section"> </v-container>
+    <v-container class="my-6" id="dashboard-view" tag="section">
+      <h2>Details</h2>
+    </v-container>
   </v-app>
 </template>
 
