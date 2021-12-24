@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Account from "../views/Account.vue";
+import AccountPage from "../components/AccountPage.vue";
 import Login from "../components/Login";
 import About from "../views/About.vue";
 import DashboardHome from "../components/DashboardHome.vue";
@@ -15,9 +15,9 @@ const routes = [
     component: Home,
   },
   {
-    path: "/account",
-    name: "Account",
-    component: Account,
+    path: "/AccountPage",
+    name: "AccountPage",
+    component: AccountPage,
   },
 
   {

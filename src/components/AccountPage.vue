@@ -1,5 +1,13 @@
 <template>
-  <Navbar />
+  <div class="account">
+    <Navbar />
+    <div class="fluid m-0 p-0">
+      
+      <h1 class="subheading grey--text">Account</h1>
+    </div>
+
+    <v-container class="my-6" id="dashboard-view" tag="section"> </v-container>
+  </div>
 </template>
 
 <script>
