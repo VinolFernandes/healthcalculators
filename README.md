@@ -9,16 +9,11 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Description
+___
+Collaborated with a team to create a Vue.js-based web
+application that provides health calculators for individuals
+to calculate and track health indicators like body fat
+percentage and BMI.
+Significance of MVVM architecture when building the
+application was understood.
