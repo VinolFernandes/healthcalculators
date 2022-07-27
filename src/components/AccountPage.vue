@@ -25,13 +25,13 @@ export default {
   font-weight: 900;
   font-family: "Ultra", sans-serif;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 10px;
   text-transform: uppercase;
   text-shadow: 0 2px #ffce00, 0 3px #777;
 }
 #accountbg {
   background-color: indigo;
-  background: url("../assets/9.png") no-repeat center center;
+  /* background: url("../assets/9.png") no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
