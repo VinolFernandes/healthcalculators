@@ -8,7 +8,7 @@
       <v-container class="py-15">
         <v-layout wrap>
           <v-flex sm12 md6 offset-md3>
-            <v-card elevation="4" dark color="#FF882D" tag="section">
+            <v-card elevation="4" dark color="#413d45" tag="section">
               <v-card-title align-center>
                 <v-layout align-center justify-space-between>
                   <h3 class="h2">
