@@ -126,7 +126,7 @@ export default {
 <style>
 #inspire {
   background-color: indigo;
-  background: url("../assets/8.png") no-repeat center center;
+  /* background: url("../assets/8.png") no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

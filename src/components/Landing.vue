@@ -117,7 +117,7 @@ export default {
 }
 #home-page {
   background-color: indigo;
-  background: url("../assets/2.png") no-repeat center center;
+  /* background: url("../assets/2.png") no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

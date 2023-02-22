@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 #inspire {
-  background: url("../assets/69.png") no-repeat center center;
+  /* background: url("../assets/69.png") no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
